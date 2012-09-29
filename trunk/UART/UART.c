@@ -35,7 +35,7 @@
 #include "driverlib/rom.h"
 #include "driverlib/rom_map.h"
 #include "grlib/grlib.h"
-
+#include "glcd.h"
 
 //*****************************************************************************
 //
@@ -172,21 +172,11 @@ main(void)
     tRectangle sRect;
 
     //
-    // Set the clocking to run directly from the crystal.
-    //
-    //ROM_SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
-    //                   SYSCTL_XTAL_16MHZ);
-
-    //
-    // Set the device pinout appropriately for this board.
-    //
-    //GPIO_PORTA_DIR_R = 0xC0;
-    //GPIO_PORTA_DEN_R = 0xC0;
 	// Set the clocking to run directly from the internal crystal/oscillator.
+	//
 	ROM_SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_INT | SYSCTL_MAIN_OSC_DIS |
 		SYSCTL_XTAL_16MHZ);
-	//ROM_SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_MAIN |
-    //                   SYSCTL_XTAL_16MHZ);
+	// Enable IO port for UARTs
 	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
 	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
 	GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE,GPIO_PIN_7);
@@ -207,12 +197,12 @@ main(void)
     IntMasterEnable();
 
     //
-    // Set GPIO A0 and A1 as UART pins.
+    // Set UART pins.
     //
     ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 	ROM_GPIOPinTypeUART(GPIO_PORTD_BASE, GPIO_PIN_2 | GPIO_PIN_3);
     //
-    // Configure the UART for 115,200, 8-N-1 operation.
+    // Configure the UART for 9600, 8-N-1 operation.
     //
     ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 9600,
                             (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
@@ -227,12 +217,17 @@ main(void)
     ROM_IntEnable(INT_UART0);
     ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
 	ROM_UARTIntEnable(UART1_BASE, UART_INT_RX | UART_INT_RT);
-
+   	
+	//
+    // Initialize the display driver.
     //
-    // Prompt for text to be entered.
-    //
+    GLCD_INIT();
+	GLCD_FILL(0);
+    GLCD_DRW_REC_SOLID(45,45,20,20,1);
+	GLCD_OUT_STR(40,1,"Minh THu MT",1);
+	GLCD_DRW_LINE(2,2,8,8,1);
+    GLCD_DISPLAY();
     
-
     //
     // Loop forever echoing data through the UART.
     //

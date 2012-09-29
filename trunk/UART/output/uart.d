@@ -13,3 +13,5 @@
 .\output\uart.o: C:\StellarisWare\driverlib/rom.h
 .\output\uart.o: C:\StellarisWare\driverlib/rom_map.h
 .\output\uart.o: C:\StellarisWare\grlib/grlib.h
+.\output\uart.o: glcd.h
+.\output\uart.o: C:\Keil\ARM\RV31\INC\math.h
