@@ -1,0 +1,15 @@
+uart.o: UART.c
+uart.o: C:\StellarisWare\inc/lm3s9790.h
+uart.o: C:\StellarisWare\inc/hw_gpio.h
+uart.o: C:\StellarisWare\inc/hw_ints.h
+uart.o: C:\StellarisWare\inc/hw_memmap.h
+uart.o: C:\StellarisWare\inc/hw_types.h
+uart.o: C:\StellarisWare\driverlib/debug.h
+uart.o: C:\StellarisWare\driverlib/gpio.h
+uart.o: C:\StellarisWare\driverlib/pin_map.h
+uart.o: C:\StellarisWare\driverlib/interrupt.h
+uart.o: C:\StellarisWare\driverlib/sysctl.h
+uart.o: C:\StellarisWare\driverlib/uart.h
+uart.o: C:\StellarisWare\driverlib/rom.h
+uart.o: C:\StellarisWare\driverlib/rom_map.h
+uart.o: C:\StellarisWare\grlib/grlib.h

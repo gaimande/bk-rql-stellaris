@@ -1,0 +1,22 @@
+*** Creating Trace Output File '.\output\UART0.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\output\startup.o"'
+### List of Objects: adding '".\output\uart.o"'
+### List of Objects: adding '"C:\StellarisWare\driverlib\rvmdk-cm3\driverlib-cm3.lib"'
+### List of Objects: adding '"C:\StellarisWare\grlib\rvmdk-cm3\grlib-cm3.lib"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\output\startup.o" ".\output\uart.o" "C:\StellarisWare\driverlib\rvmdk-cm3\driverlib-cm3.lib" "C:\StellarisWare\grlib\rvmdk-cm3\grlib-cm3.lib" --library_type=microlib --strict --scatter "UART.sct" 
+--entry Reset_Handler --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\UART0.map" -o ".\output\UART0.axf"### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\output\UART0.axf'
+### ADS-LD Command File: '.\output\UART0.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\output\UART0.lnp', Handle=0x0000065C
+### Writing '.lnp' file
+### ADS-LD Command file '.\output\UART0.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

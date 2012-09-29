@@ -1,0 +1,4 @@
+--cpu Cortex-M3 ".\rvmdk\startup_rvmdk.o" ".\rvmdk\sw01270.o" ".\rvmdk\sw_uart_basic.o" "C:\StellarisWare\driverlib\rvmdk\driverlib.lib" --library_type=microlib --strict --scatter "sw01270.sct" 
+--entry Reset_Handler --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\rvmdk\q2t.map" -o ".\rvmdk\q2t.axf"

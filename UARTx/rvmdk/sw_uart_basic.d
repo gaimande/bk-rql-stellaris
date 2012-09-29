@@ -1,0 +1,13 @@
+.\rvmdk\sw_uart_basic.o: sw_uart_basic.c
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\inc/hw_gpio.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\inc/hw_ints.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\inc/hw_memmap.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\inc/hw_types.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\inc/hw_timer.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\driverlib/sysctl.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\driverlib/timer.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\driverlib/debug.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\driverlib/interrupt.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\driverlib/gpio.h
+.\rvmdk\sw_uart_basic.o: C:\StellarisWare\driverlib/pin_map.h
+.\rvmdk\sw_uart_basic.o: sw_uart_basic.h

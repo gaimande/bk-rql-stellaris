@@ -1,0 +1,49 @@
+Build target 'UART'
+linking...
+Program Size: Code=668 RO-data=136 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART0.bin .\output\UART0.axf
+".\output\UART0.axf" - 0 Error(s), 0 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(127): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=668 RO-data=136 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART0.bin .\output\UART0.axf
+".\output\UART0.axf" - 0 Error(s), 2 Warning(s).
+Build target 'UART'
+assembling Startup.s...
+compiling UART1.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART1.c(127): warning:  #177-D: variable "sRect" was declared but never referenced
+UART1.c:       tRectangle sRect;
+UART1.c:                  ^
+UART1.c: UART1.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=676 RO-data=136 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART1.bin .\output\UART1.axf
+".\output\UART1.axf" - 0 Error(s), 2 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(127): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=668 RO-data=136 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART0.bin .\output\UART0.axf
+".\output\UART0.axf" - 0 Error(s), 2 Warning(s).

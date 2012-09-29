@@ -1,0 +1,13 @@
+.\output\uartstdio.o: C:\StellarisWare\utils\uartstdio.c
+.\output\uartstdio.o: C:\Keil\ARM\RV31\INC\stdarg.h
+.\output\uartstdio.o: C:\StellarisWare\inc/hw_ints.h
+.\output\uartstdio.o: C:\StellarisWare\inc/hw_memmap.h
+.\output\uartstdio.o: C:\StellarisWare\inc/hw_types.h
+.\output\uartstdio.o: C:\StellarisWare\inc/hw_uart.h
+.\output\uartstdio.o: C:\StellarisWare\driverlib/debug.h
+.\output\uartstdio.o: C:\StellarisWare\driverlib/interrupt.h
+.\output\uartstdio.o: C:\StellarisWare\driverlib/rom.h
+.\output\uartstdio.o: C:\StellarisWare\driverlib/rom_map.h
+.\output\uartstdio.o: C:\StellarisWare\driverlib/sysctl.h
+.\output\uartstdio.o: C:\StellarisWare\driverlib/uart.h
+.\output\uartstdio.o: C:\StellarisWare\utils/uartstdio.h

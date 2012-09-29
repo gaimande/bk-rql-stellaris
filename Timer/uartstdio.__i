@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork -IC:\StellarisWare -IC:\StellarisWare\boards\ek-lm3s9b92 -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Luminary" -o "uartstdio.o" --omf_browse "uartstdio.crf" --depend "uartstdio.d" "C:\StellarisWare\utils\uartstdio.c"

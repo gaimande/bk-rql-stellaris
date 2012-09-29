@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O2 -Otime --apcs=interwork -I..\.. -IC:\StellarisWare -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Luminary" -Drvmdk -DPART_LM3S39790 -DTARGET_IS_TEMPEST_RC3 -o ".\rvmdk\sw_uart_basic.o" --omf_browse ".\rvmdk\sw_uart_basic.crf" --depend ".\rvmdk\sw_uart_basic.d" "sw_uart_basic.c"
