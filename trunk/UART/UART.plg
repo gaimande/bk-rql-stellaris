@@ -1,0 +1,896 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\Code Project\Stellaris Code\UART.uvproj
+Project File Date:  09/22/2012
+
+<h2>Output:</h2>
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(76): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(81): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(86): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(91): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(112): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(142): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(152): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(164): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(165): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(124): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(76): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(81): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(86): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(91): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(112): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(142): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(152): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(164): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(165): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(124): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+assembling Startup.s...
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(76): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(81): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(86): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(91): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(112): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(142): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(152): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(164): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(165): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(124): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+assembling Startup.s...
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(76): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(81): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(86): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(91): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(112): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(142): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(152): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(164): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(165): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(124): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(76): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(81): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(86): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(91): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(112): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(142): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(152): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(157): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(164): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(165): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(124): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(77): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(82): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(87): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(92): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(113): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(143): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(153): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(158): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(158): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(165): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(166): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(125): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(45): error:  #5: cannot open source input file "set_pinout.h": No such file or directory
+UART.c:   #include "set_pinout.h"
+UART.c:                          ^
+UART.c: UART.c: 1 warning, 1 error
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(84): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(89): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(94): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(99): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(120): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(150): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(160): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(165): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(165): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(172): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(173): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(132): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(43): error:  #5: cannot open source input file "set_pinout.h": No such file or directory
+UART.c:   #include "set_pinout.h"
+UART.c:                          ^
+UART.c: UART.c: 1 warning, 1 error
+Target not created
+Build target 'UART'
+assembling Startup.s...
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(78): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(83): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(88): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(93): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(114): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(144): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(154): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(159): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(159): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(166): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(167): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(126): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(90): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(95): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(100): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(105): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(126): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(156): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(166): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(171): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(171): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(178): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(179): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(138): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(92): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(97): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(102): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(107): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(128): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(158): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(168): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(173): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(173): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(180): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(181): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(140): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(78): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(83): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(88): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(93): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(114): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(144): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(154): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(159): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(159): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(166): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(167): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(126): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(73): warning:  #223-D: function "ROM_UARTIntStatus" declared implicitly
+UART.c:       ulStatus = ROM_UARTIntStatus(UART0_BASE, true);
+UART.c:                  ^
+UART.c(78): warning:  #223-D: function "ROM_UARTIntClear" declared implicitly
+UART.c:       ROM_UARTIntClear(UART0_BASE, ulStatus);
+UART.c:       ^
+UART.c(83): warning:  #223-D: function "ROM_UARTCharsAvail" declared implicitly
+UART.c:       while(ROM_UARTCharsAvail(UART0_BASE))
+UART.c:             ^
+UART.c(88): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE,
+UART.c:           ^
+UART.c(109): warning:  #223-D: function "ROM_UARTCharPutNonBlocking" declared implicitly
+UART.c:           ROM_UARTCharPutNonBlocking(UART0_BASE, *pucBuffer++);
+UART.c:           ^
+UART.c(139): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+UART.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
+UART.c:       ^
+UART.c(149): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+UART.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+UART.c:       ^
+UART.c(154): warning:  #223-D: function "ROM_UARTConfigSetExpClk" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:       ^
+UART.c(154): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+UART.c:       ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200,
+UART.c:                                           ^
+UART.c(161): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+UART.c:       ROM_IntEnable(INT_UART0);
+UART.c:       ^
+UART.c(162): warning:  #223-D: function "ROM_UARTIntEnable" declared implicitly
+UART.c:       ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
+UART.c:       ^
+UART.c(121): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 13 warnings, 0 errors
+linking...
+UART.axf: Error: L6218E: Undefined symbol ROM_GPIOPinTypeUART (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_IntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlClockGet (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_SysCtlPeripheralEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharPutNonBlocking (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTCharsAvail (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTConfigSetExpClk (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntClear (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntEnable (referred from uart.o).
+UART.axf: Error: L6218E: Undefined symbol ROM_UARTIntStatus (referred from uart.o).
+UART.axf: Not enough information to list image symbols.
+UART.axf: Not enough information to list the image map.
+UART.axf: Finished: 2 information, 0 warning and 10 error messages.
+Target not created
+Build target 'UART'
+assembling Startup.s...
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(126): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=556 RO-data=16 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf": Error: Q0122E: Could not open file '.\output\UART.axf': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
+"UART.axf" - 0 Error(s), 2 Warning(s).
+Build target 'UART'
+linking...
+Program Size: Code=556 RO-data=16 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf": Error: Q0122E: Could not open file '.\output\UART.axf': No such file or directory
+Finished: 0 information, 0 warning and 1 error messages.
+"UART.axf" - 0 Error(s), 0 Warning(s).
+Build target 'UART'
+assembling Startup.s...
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(126): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=556 RO-data=16 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 2 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(140): warning:  #223-D: function "PIOPinConfigure" declared implicitly
+UART.c:         PIOPinConfigure(GPIO_PA0_U0RX);
+UART.c:         ^
+UART.c(126): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 3 warnings, 0 errors
+linking...
+.\output\UART.axf: Error: L6218E: Undefined symbol PIOPinConfigure (referred from uart.o).
+.\output\UART.axf: Not enough information to list image symbols.
+.\output\UART.axf: Not enough information to list the image map.
+.\output\UART.axf: Finished: 2 information, 0 warning and 1 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(143): warning:  #223-D: function "PIOPinConfigure" declared implicitly
+UART.c:         PIOPinConfigure(GPIO_PA0_U0RX);
+UART.c:         ^
+UART.c(129): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 3 warnings, 0 errors
+linking...
+.\output\UART.axf: Error: L6218E: Undefined symbol PIOPinConfigure (referred from uart.o).
+.\output\UART.axf: Not enough information to list image symbols.
+.\output\UART.axf: Not enough information to list the image map.
+.\output\UART.axf: Finished: 2 information, 0 warning and 1 error messages.
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(129): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=644 RO-data=136 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 2 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(126): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=644 RO-data=136 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 2 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(126): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=652 RO-data=136 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 2 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+UART.c(126): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 2 warnings, 0 errors
+linking...
+Program Size: Code=652 RO-data=136 RW-data=0 ZI-data=256  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 2 Warning(s).

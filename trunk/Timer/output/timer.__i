@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O2 --apcs=interwork --split_sections -IC:\StellarisWare -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Luminary" -Douput -DPART_LM3S9790 -DTARGET_IS_TEMPEST_RC3 -o ".\output\timer.o" --omf_browse ".\output\timer.crf" --depend ".\output\timer.d" "timer.c"

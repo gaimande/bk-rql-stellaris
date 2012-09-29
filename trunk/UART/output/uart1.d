@@ -1,0 +1,15 @@
+.\output\uart1.o: UART1.c
+.\output\uart1.o: C:\StellarisWare\inc/lm3s9790.h
+.\output\uart1.o: C:\StellarisWare\inc/hw_gpio.h
+.\output\uart1.o: C:\StellarisWare\inc/hw_ints.h
+.\output\uart1.o: C:\StellarisWare\inc/hw_memmap.h
+.\output\uart1.o: C:\StellarisWare\inc/hw_types.h
+.\output\uart1.o: C:\StellarisWare\driverlib/debug.h
+.\output\uart1.o: C:\StellarisWare\driverlib/gpio.h
+.\output\uart1.o: C:\StellarisWare\driverlib/pin_map.h
+.\output\uart1.o: C:\StellarisWare\driverlib/interrupt.h
+.\output\uart1.o: C:\StellarisWare\driverlib/sysctl.h
+.\output\uart1.o: C:\StellarisWare\driverlib/uart.h
+.\output\uart1.o: C:\StellarisWare\driverlib/rom.h
+.\output\uart1.o: C:\StellarisWare\driverlib/rom_map.h
+.\output\uart1.o: C:\StellarisWare\grlib/grlib.h

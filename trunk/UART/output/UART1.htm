@@ -1,0 +1,197 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\output\UART1.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\output\UART1.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT4.0 [Build 728]: Last Updated: Sun Sep 23 10:11:00 2012
+<BR><P>
+<H3>Maximum Stack Usage =         40 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+main &rArr; UARTSend
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[234e61c]">Reset_Handler</a>
+ <LI><a href="#[234e7fc]">NmiSR</a>
+ <LI><a href="#[234e7c0]">FaultISR</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[234e7fc]">NmiSR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[234e7fc]">NmiSR</a><BR>
+ <LI><a href="#[234e7c0]">FaultISR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[234e7c0]">FaultISR</a><BR>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[234e784]">IntDefaultHandler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[234e61c]">Reset_Handler</a>
+ <LI><a href="#[234e7fc]">NmiSR</a>
+ <LI><a href="#[234e7c0]">FaultISR</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234e784]">IntDefaultHandler</a>
+ <LI><a href="#[234d104]">main</a>
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[234e61c]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[23407ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
+
+<P><STRONG><a name="[23407ec]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[234e61c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
+</UL>
+
+<P><STRONG><a name="[23404a4]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+
+<P><STRONG><a name="[2340378]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[2340120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[234033c]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[2340120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[234024c]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7.o(.ARM.Collect$$$$00000007))
+
+<P><STRONG><a name="[2345d3c]"></a>CPUcpsid</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[23409cc]"></a>CPUprimask</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[2345d00]"></a>CPUcpsie</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, cpu.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[234d08c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntMasterEnable
+</UL>
+
+<P><STRONG><a name="[2340990]"></a>CPUwfi</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[2345d78]"></a>CPUbasepriSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[2345db4]"></a>CPUbasepriGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[2340120]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[234033c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[2340378]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+</UL>
+
+<P><STRONG><a name="[23400e4]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[234d0c8]"></a>GPIOPinConfigure</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinConfigure))
+<BR><BR>[Called By]<UL><LI><a href="#[234d104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[234d08c]"></a>IntMasterEnable</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupt.o(i.IntMasterEnable))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IntMasterEnable
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2345d00]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPUcpsie
+</UL>
+<BR>[Called By]<UL><LI><a href="#[234d104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[234d140]"></a>UARTSend</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, uart1.o(i.UARTSend))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UARTSend
+</UL>
+<BR>[Called By]<UL><LI><a href="#[234d104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[354f7c0]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[354f784]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[354f748]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+
+<P><STRONG><a name="[234d104]"></a>main</STRONG> (Thumb, 110 bytes, Stack size 16 bytes, uart1.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = main &rArr; UARTSend
+</UL>
+<BR>[Calls]<UL><LI><a href="#[234d08c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntMasterEnable
+<LI><a href="#[234d0c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinConfigure
+<LI><a href="#[234d140]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> entry7.o(.ARM.Collect$$$$00000007)
+</UL><P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[234e7fc]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[234e7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[234e7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[234e7c0]"></a>FaultISR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[234e7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[234e7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[234e784]"></a>IntDefaultHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[234e784]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[234e784]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

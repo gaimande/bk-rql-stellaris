@@ -1,0 +1,278 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\Code Project\Stellaris Code\Timer\timer.uvproj
+Project File Date:  09/24/2012
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling Startup.s...
+compiling timer.c...
+timer.c(92): warning:  #223-D: function "ROM_TimerIntClear" declared implicitly
+timer.c:       ROM_TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(102): warning:  #223-D: function "ROM_IntMasterDisable" declared implicitly
+timer.c:       ROM_IntMasterDisable();
+timer.c:       ^
+timer.c(106): warning:  #223-D: function "ROM_GPIOPinWrite" declared implicitly
+timer.c:        ROM_GPIOPinWrite(LED_PORT_BASE, LED_PIN1, fuck);
+timer.c:        ^
+timer.c(107): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(121): warning:  #223-D: function "ROM_TimerIntClear" declared implicitly
+timer.c:       ROM_TimerIntClear(TIMER1_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(131): warning:  #223-D: function "ROM_IntMasterDisable" declared implicitly
+timer.c:       ROM_IntMasterDisable();
+timer.c:       ^
+timer.c(135): warning:  #223-D: function "ROM_GPIOPinWrite" declared implicitly
+timer.c:        ROM_GPIOPinWrite(LED_PORT_BASE, LED_PIN2, fuck2);
+timer.c:        ^
+timer.c(136): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(157): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+timer.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+timer.c:       ^
+timer.c(162): warning:  #223-D: function "ROM_GPIOPinTypeGPIOOutput" declared implicitly
+timer.c:       ROM_GPIOPinTypeGPIOOutput(LED_PORT_BASE, LED_PIN1);
+timer.c:       ^
+timer.c(164): error:  #20: identifier "GPIO_PA0_U0RX" is undefined
+timer.c:       GPIOPinConfigure(GPIO_PA0_U0RX);
+timer.c:                        ^
+timer.c(165): error:  #20: identifier "GPIO_PA1_U0TX" is undefined
+timer.c:       GPIOPinConfigure(GPIO_PA1_U0TX);
+timer.c:                        ^
+timer.c(166): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+timer.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+timer.c:       ^
+timer.c(180): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(185): warning:  #223-D: function "ROM_TimerConfigure" declared implicitly
+timer.c:       ROM_TimerConfigure(TIMER0_BASE, TIMER_CFG_PERIODIC);
+timer.c:       ^
+timer.c(187): warning:  #223-D: function "ROM_TimerLoadSet" declared implicitly
+timer.c:       ROM_TimerLoadSet(TIMER0_BASE, TIMER_A, ROM_SysCtlClockGet());
+timer.c:       ^
+timer.c(187): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+timer.c:       ROM_TimerLoadSet(TIMER0_BASE, TIMER_A, ROM_SysCtlClockGet());
+timer.c:                                              ^
+timer.c(193): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+timer.c:       ROM_IntEnable(INT_TIMER0A);
+timer.c:       ^
+timer.c(195): warning:  #223-D: function "ROM_TimerIntEnable" declared implicitly
+timer.c:       ROM_TimerIntEnable(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(201): warning:  #223-D: function "ROM_TimerEnable" declared implicitly
+timer.c:       ROM_TimerEnable(TIMER0_BASE, TIMER_A);
+timer.c:       ^
+timer.c: timer.c: 18 warnings, 2 errors
+Target not created
+Build target 'Target 1'
+compiling timer.c...
+timer.c(92): warning:  #223-D: function "ROM_TimerIntClear" declared implicitly
+timer.c:       ROM_TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(102): warning:  #223-D: function "ROM_IntMasterDisable" declared implicitly
+timer.c:       ROM_IntMasterDisable();
+timer.c:       ^
+timer.c(106): warning:  #223-D: function "ROM_GPIOPinWrite" declared implicitly
+timer.c:        ROM_GPIOPinWrite(LED_PORT_BASE, LED_PIN1, fuck);
+timer.c:        ^
+timer.c(107): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(121): warning:  #223-D: function "ROM_TimerIntClear" declared implicitly
+timer.c:       ROM_TimerIntClear(TIMER1_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(131): warning:  #223-D: function "ROM_IntMasterDisable" declared implicitly
+timer.c:       ROM_IntMasterDisable();
+timer.c:       ^
+timer.c(135): warning:  #223-D: function "ROM_GPIOPinWrite" declared implicitly
+timer.c:        ROM_GPIOPinWrite(LED_PORT_BASE, LED_PIN2, fuck2);
+timer.c:        ^
+timer.c(136): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(157): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+timer.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+timer.c:       ^
+timer.c(162): warning:  #223-D: function "ROM_GPIOPinTypeGPIOOutput" declared implicitly
+timer.c:       ROM_GPIOPinTypeGPIOOutput(LED_PORT_BASE, LED_PIN1);
+timer.c:       ^
+timer.c(164): error:  #20: identifier "GPIO_PA0_U0RX" is undefined
+timer.c:       GPIOPinConfigure(GPIO_PA0_U0RX);
+timer.c:                        ^
+timer.c(165): error:  #20: identifier "GPIO_PA1_U0TX" is undefined
+timer.c:       GPIOPinConfigure(GPIO_PA1_U0TX);
+timer.c:                        ^
+timer.c(166): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+timer.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+timer.c:       ^
+timer.c(180): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(185): warning:  #223-D: function "ROM_TimerConfigure" declared implicitly
+timer.c:       ROM_TimerConfigure(TIMER0_BASE, TIMER_CFG_PERIODIC);
+timer.c:       ^
+timer.c(187): warning:  #223-D: function "ROM_TimerLoadSet" declared implicitly
+timer.c:       ROM_TimerLoadSet(TIMER0_BASE, TIMER_A, ROM_SysCtlClockGet());
+timer.c:       ^
+timer.c(187): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+timer.c:       ROM_TimerLoadSet(TIMER0_BASE, TIMER_A, ROM_SysCtlClockGet());
+timer.c:                                              ^
+timer.c(193): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+timer.c:       ROM_IntEnable(INT_TIMER0A);
+timer.c:       ^
+timer.c(195): warning:  #223-D: function "ROM_TimerIntEnable" declared implicitly
+timer.c:       ROM_TimerIntEnable(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(201): warning:  #223-D: function "ROM_TimerEnable" declared implicitly
+timer.c:       ROM_TimerEnable(TIMER0_BASE, TIMER_A);
+timer.c:       ^
+timer.c: timer.c: 18 warnings, 2 errors
+Target not created
+Build target 'Target 1'
+compiling timer.c...
+timer.c(92): warning:  #223-D: function "ROM_TimerIntClear" declared implicitly
+timer.c:       ROM_TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(102): warning:  #223-D: function "ROM_IntMasterDisable" declared implicitly
+timer.c:       ROM_IntMasterDisable();
+timer.c:       ^
+timer.c(106): warning:  #223-D: function "ROM_GPIOPinWrite" declared implicitly
+timer.c:        ROM_GPIOPinWrite(LED_PORT_BASE, LED_PIN1, fuck);
+timer.c:        ^
+timer.c(107): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(121): warning:  #223-D: function "ROM_TimerIntClear" declared implicitly
+timer.c:       ROM_TimerIntClear(TIMER1_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(131): warning:  #223-D: function "ROM_IntMasterDisable" declared implicitly
+timer.c:       ROM_IntMasterDisable();
+timer.c:       ^
+timer.c(135): warning:  #223-D: function "ROM_GPIOPinWrite" declared implicitly
+timer.c:        ROM_GPIOPinWrite(LED_PORT_BASE, LED_PIN2, fuck2);
+timer.c:        ^
+timer.c(136): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(157): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+timer.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+timer.c:       ^
+timer.c(162): warning:  #223-D: function "ROM_GPIOPinTypeGPIOOutput" declared implicitly
+timer.c:       ROM_GPIOPinTypeGPIOOutput(LED_PORT_BASE, LED_PIN1);
+timer.c:       ^
+timer.c(164): error:  #20: identifier "GPIO_PA0_U0RX" is undefined
+timer.c:       GPIOPinConfigure(GPIO_PA0_U0RX);
+timer.c:                        ^
+timer.c(165): error:  #20: identifier "GPIO_PA1_U0TX" is undefined
+timer.c:       GPIOPinConfigure(GPIO_PA1_U0TX);
+timer.c:                        ^
+timer.c(166): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+timer.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+timer.c:       ^
+timer.c(180): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(185): warning:  #223-D: function "ROM_TimerConfigure" declared implicitly
+timer.c:       ROM_TimerConfigure(TIMER0_BASE, TIMER_CFG_PERIODIC);
+timer.c:       ^
+timer.c(187): warning:  #223-D: function "ROM_TimerLoadSet" declared implicitly
+timer.c:       ROM_TimerLoadSet(TIMER0_BASE, TIMER_A, ROM_SysCtlClockGet());
+timer.c:       ^
+timer.c(187): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+timer.c:       ROM_TimerLoadSet(TIMER0_BASE, TIMER_A, ROM_SysCtlClockGet());
+timer.c:                                              ^
+timer.c(193): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+timer.c:       ROM_IntEnable(INT_TIMER0A);
+timer.c:       ^
+timer.c(195): warning:  #223-D: function "ROM_TimerIntEnable" declared implicitly
+timer.c:       ROM_TimerIntEnable(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(201): warning:  #223-D: function "ROM_TimerEnable" declared implicitly
+timer.c:       ROM_TimerEnable(TIMER0_BASE, TIMER_A);
+timer.c:       ^
+timer.c: timer.c: 18 warnings, 2 errors
+compiling uartstdio.c...
+Target not created
+Build target 'Timers'
+compiling timer.c...
+timer.c(92): warning:  #223-D: function "ROM_TimerIntClear" declared implicitly
+timer.c:       ROM_TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(102): warning:  #223-D: function "ROM_IntMasterDisable" declared implicitly
+timer.c:       ROM_IntMasterDisable();
+timer.c:       ^
+timer.c(106): warning:  #223-D: function "ROM_GPIOPinWrite" declared implicitly
+timer.c:        ROM_GPIOPinWrite(LED_PORT_BASE, LED_PIN1, fuck);
+timer.c:        ^
+timer.c(107): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(121): warning:  #223-D: function "ROM_TimerIntClear" declared implicitly
+timer.c:       ROM_TimerIntClear(TIMER1_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(131): warning:  #223-D: function "ROM_IntMasterDisable" declared implicitly
+timer.c:       ROM_IntMasterDisable();
+timer.c:       ^
+timer.c(135): warning:  #223-D: function "ROM_GPIOPinWrite" declared implicitly
+timer.c:        ROM_GPIOPinWrite(LED_PORT_BASE, LED_PIN2, fuck2);
+timer.c:        ^
+timer.c(136): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(157): warning:  #223-D: function "ROM_SysCtlPeripheralEnable" declared implicitly
+timer.c:       ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+timer.c:       ^
+timer.c(162): warning:  #223-D: function "ROM_GPIOPinTypeGPIOOutput" declared implicitly
+timer.c:       ROM_GPIOPinTypeGPIOOutput(LED_PORT_BASE, LED_PIN1);
+timer.c:       ^
+timer.c(164): error:  #20: identifier "GPIO_PA0_U0RX" is undefined
+timer.c:       GPIOPinConfigure(GPIO_PA0_U0RX);
+timer.c:                        ^
+timer.c(165): error:  #20: identifier "GPIO_PA1_U0TX" is undefined
+timer.c:       GPIOPinConfigure(GPIO_PA1_U0TX);
+timer.c:                        ^
+timer.c(166): warning:  #223-D: function "ROM_GPIOPinTypeUART" declared implicitly
+timer.c:       ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+timer.c:       ^
+timer.c(180): warning:  #223-D: function "ROM_IntMasterEnable" declared implicitly
+timer.c:       ROM_IntMasterEnable();
+timer.c:       ^
+timer.c(185): warning:  #223-D: function "ROM_TimerConfigure" declared implicitly
+timer.c:       ROM_TimerConfigure(TIMER0_BASE, TIMER_CFG_PERIODIC);
+timer.c:       ^
+timer.c(187): warning:  #223-D: function "ROM_TimerLoadSet" declared implicitly
+timer.c:       ROM_TimerLoadSet(TIMER0_BASE, TIMER_A, ROM_SysCtlClockGet());
+timer.c:       ^
+timer.c(187): warning:  #223-D: function "ROM_SysCtlClockGet" declared implicitly
+timer.c:       ROM_TimerLoadSet(TIMER0_BASE, TIMER_A, ROM_SysCtlClockGet());
+timer.c:                                              ^
+timer.c(193): warning:  #223-D: function "ROM_IntEnable" declared implicitly
+timer.c:       ROM_IntEnable(INT_TIMER0A);
+timer.c:       ^
+timer.c(195): warning:  #223-D: function "ROM_TimerIntEnable" declared implicitly
+timer.c:       ROM_TimerIntEnable(TIMER0_BASE, TIMER_TIMA_TIMEOUT);
+timer.c:       ^
+timer.c(201): warning:  #223-D: function "ROM_TimerEnable" declared implicitly
+timer.c:       ROM_TimerEnable(TIMER0_BASE, TIMER_A);
+timer.c:       ^
+timer.c: timer.c: 18 warnings, 2 errors
+compiling uartstdio.c...
+Target not created
+Build target 'Timers'
+assembling Startup.s...
+compiling timer.c...
+compiling uartstdio.c...
+linking...
+.\output\timers.axf: error: L6031U: Could not open scatter description file timers.sct: No such file or directory
+.\output\timers.axf: Not enough information to list image symbols.
+.\output\timers.axf: Not enough information to list the image map.
+.\output\timers.axf: Finished: 2 information, 0 warning, 0 error and 1 fatal error messages.
+Target not created

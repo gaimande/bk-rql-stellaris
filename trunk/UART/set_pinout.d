@@ -1,0 +1,13 @@
+set_pinout.o: C:\StellarisWare\boards\dk-lm3s9b96\drivers\set_pinout.c
+set_pinout.o: C:\StellarisWare\inc/hw_gpio.h
+set_pinout.o: C:\StellarisWare\inc/hw_memmap.h
+set_pinout.o: C:\StellarisWare\inc/hw_types.h
+set_pinout.o: C:\StellarisWare\driverlib/debug.h
+set_pinout.o: C:\StellarisWare\driverlib/epi.h
+set_pinout.o: C:\StellarisWare\driverlib/gpio.h
+set_pinout.o: C:\StellarisWare\driverlib/pin_map.h
+set_pinout.o: C:\StellarisWare\driverlib/i2c.h
+set_pinout.o: C:\StellarisWare\driverlib/sysctl.h
+set_pinout.o: C:\StellarisWare\driverlib/rom.h
+set_pinout.o: C:\StellarisWare\boards\dk-lm3s9b96\drivers\set_pinout.h
+set_pinout.o: C:\StellarisWare\boards\dk-lm3s9b96\drivers\camerafpga.h

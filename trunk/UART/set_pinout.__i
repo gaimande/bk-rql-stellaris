@@ -1,0 +1,1 @@
+-c --cpu Cortex-M3 -g -O0 --apcs=interwork -IC:\StellarisWare -IC:\StellarisWare\boards\dk-lm3s9b96 -I "C:\Keil\ARM\INC" -I "C:\Keil\ARM\INC\Luminary" -o "set_pinout.o" --omf_browse "set_pinout.crf" --depend "set_pinout.d" "C:\StellarisWare\boards\dk-lm3s9b96\drivers\set_pinout.c"

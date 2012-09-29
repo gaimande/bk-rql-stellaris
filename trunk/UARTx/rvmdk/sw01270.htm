@@ -1,0 +1,411 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html><head>
+<title>Static Call Graph - [.\rvmdk\sw01270.axf]</title></head>
+<body><HR>
+<H1>Static Call Graph for image .\rvmdk\sw01270.axf</H1><HR>
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT4.0 [Build 728]: Last Updated: Fri Sep 28 15:22:42 2012
+<BR><P>
+<H3>Maximum Stack Usage =         48 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+Call chain for Maximum Stack Depth:</H3>
+main &rArr; SW_UARTConfigSetExpClk &rArr; SW_UARTInitTxRxTimers
+<P>
+<H3>
+Functions with no stack information
+</H3><UL>
+ <LI><a href="#[22bf61c]">Reset_Handler</a>
+ <LI><a href="#[22bf7fc]">NmiSR</a>
+ <LI><a href="#[22bf7c0]">FaultISR</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+</UL>
+</UL>
+<P>
+<H3>
+Mutually Recursive functions
+</H3> <LI><a href="#[22b1918]">SysCtlDelay</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[22b1918]">SysCtlDelay</a><BR>
+ <LI><a href="#[22bf7fc]">NmiSR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[22bf7fc]">NmiSR</a><BR>
+ <LI><a href="#[22bf7c0]">FaultISR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[22bf7c0]">FaultISR</a><BR>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[22bf784]">IntDefaultHandler</a><BR>
+</UL>
+<P>
+<H3>
+Function Pointers
+</H3><UL>
+ <LI><a href="#[22bf61c]">Reset_Handler</a>
+ <LI><a href="#[22bf7fc]">NmiSR</a>
+ <LI><a href="#[22bf7c0]">FaultISR</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf52c]">SW_UARTStartBitDetect</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf568]">SW_UARTSendNextBit</a>
+ <LI><a href="#[22bf5a4]">SW_UARTRcvNextBit</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22bf784]">IntDefaultHandler</a>
+ <LI><a href="#[22be974]">main</a>
+</UL>
+<P>
+<H3>
+Global Symbols
+</H3>
+<P><STRONG><a name="[22bf61c]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[31e2b48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+</UL>
+
+<P><STRONG><a name="[31e2b48]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[22bf61c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
+</UL>
+
+<P><STRONG><a name="[31e2800]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+
+<P><STRONG><a name="[31e26d4]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[31e247c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[31e2698]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[31e247c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+</UL>
+
+<P><STRONG><a name="[31e25a8]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7.o(.ARM.Collect$$$$00000007))
+
+<P><STRONG><a name="[22b1918]"></a>SysCtlDelay</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sysctl.o(.emb_text))
+<BR><BR>[Calls]<UL><LI><a href="#[22b1918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlDelay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22b1918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlDelay
+<LI><a href="#[22be7d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlClockSet
+</UL>
+
+<P><STRONG><a name="[22b61c0]"></a>CPUcpsid</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[31e2cec]"></a>CPUprimask</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[22b6184]"></a>CPUcpsie</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, cpu.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[22be938]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntMasterEnable
+</UL>
+
+<P><STRONG><a name="[31e670c]"></a>CPUwfi</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[22b61fc]"></a>CPUbasepriSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[22b6238]"></a>CPUbasepriGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+
+<P><STRONG><a name="[22be974]"></a>main</STRONG> (Thumb, 130 bytes, Stack size 16 bytes, sw01270.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = main &rArr; SW_UARTConfigSetExpClk &rArr; SW_UARTInitTxRxTimers
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22be794]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlLDOSet
+<LI><a href="#[22be7d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlClockSet
+<LI><a href="#[22be80c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlClockGet
+<LI><a href="#[22be848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTEnable
+<LI><a href="#[22be884]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTConfigSetExpClk
+<LI><a href="#[22be8c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTCharPut
+<LI><a href="#[22be8fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTCharGetNonBlocking
+<LI><a href="#[22be938]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntMasterEnable
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> entry7.o(.ARM.Collect$$$$00000007)
+</UL>
+<P><STRONG><a name="[22bd948]"></a>TxBufferAdd</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, sw_uart_basic.o(.text), UNUSED)
+
+<P><STRONG><a name="[22bd90c]"></a>TxBufferRemove</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, sw_uart_basic.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[22bf568]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTSendNextBit
+</UL>
+
+<P><STRONG><a name="[22bd8d0]"></a>RxBufferAdd</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, sw_uart_basic.o(.text), UNUSED)
+
+<P><STRONG><a name="[22bd894]"></a>RxBufferRemove</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, sw_uart_basic.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd6b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTCharGet
+<LI><a href="#[22be8fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTCharGetNonBlocking
+</UL>
+
+<P><STRONG><a name="[22bd858]"></a>SW_UARTInitGPIO</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, sw_uart_basic.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[22bd420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<LI><a href="#[22bd4d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<LI><a href="#[22bd510]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[22bd54c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+<LI><a href="#[22bd588]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinIntEnable
+<LI><a href="#[22bd63c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntTypeSet
+</UL>
+
+<P><STRONG><a name="[22bd81c]"></a>SW_UARTInitTxRxTimers</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, sw_uart_basic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SW_UARTInitTxRxTimers
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22bd2f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerLoadSet
+<LI><a href="#[22bd3e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerConfigure
+<LI><a href="#[22bd420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<LI><a href="#[22bd45c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntPrioritySet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22be884]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTConfigSetExpClk
+</UL>
+
+<P><STRONG><a name="[22bf52c]"></a>SW_UARTStartBitDetect</STRONG> (Thumb, 62 bytes, Stack size 0 bytes, sw_uart_basic.o(.text))
+<BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[22bf568]"></a>SW_UARTSendNextBit</STRONG> (Thumb, 162 bytes, Stack size 4 bytes, sw_uart_basic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SW_UARTSendNextBit
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22bd90c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TxBufferRemove
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[22bf5a4]"></a>SW_UARTRcvNextBit</STRONG> (Thumb, 216 bytes, Stack size 4 bytes, sw_uart_basic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SW_UARTRcvNextBit
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[22bd7e0]"></a>SW_UARTReceiveIntRegister</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sw_uart_basic.o(.text), UNUSED)
+
+<P><STRONG><a name="[22be884]"></a>SW_UARTConfigSetExpClk</STRONG> (Thumb, 112 bytes, Stack size 16 bytes, sw_uart_basic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SW_UARTConfigSetExpClk &rArr; SW_UARTInitTxRxTimers
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22bd420]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<LI><a href="#[22bd4d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<LI><a href="#[22bd510]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[22bd54c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+<LI><a href="#[22bd588]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinIntEnable
+<LI><a href="#[22bd63c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntTypeSet
+<LI><a href="#[22bd81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitTxRxTimers
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22be974]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[22bd7a4]"></a>SW_UARTConfigGetExpClk</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, sw_uart_basic.o(.text), UNUSED)
+
+<P><STRONG><a name="[22be848]"></a>SW_UARTEnable</STRONG> (Thumb, 58 bytes, Stack size 8 bytes, sw_uart_basic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SW_UARTEnable
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22bd330]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerIntEnable
+<LI><a href="#[22bd36c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerEnable
+<LI><a href="#[22bd498]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntEnable
+<LI><a href="#[22bd600]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinIntClear
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22be974]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[22bd768]"></a>SW_UARTDisable</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, sw_uart_basic.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[22bd3a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerDisable
+<LI><a href="#[22bd5c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinIntDisable
+<LI><a href="#[22bd600]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinIntClear
+</UL>
+
+<P><STRONG><a name="[22bd72c]"></a>SW_UARTCharsAvail</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, sw_uart_basic.o(.text), UNUSED)
+
+<P><STRONG><a name="[22bd6f0]"></a>SW_UARTSpaceAvail</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, sw_uart_basic.o(.text), UNUSED)
+
+<P><STRONG><a name="[22be8fc]"></a>SW_UARTCharGetNonBlocking</STRONG> (Thumb, 2 bytes, Stack size 0 bytes, sw_uart_basic.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[22bd894]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RxBufferRemove
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22be974]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[22bd6b4]"></a>SW_UARTCharGet</STRONG> (Thumb, 60 bytes, Stack size 0 bytes, sw_uart_basic.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[22bd894]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RxBufferRemove
+</UL>
+
+<P><STRONG><a name="[22bd678]"></a>SW_UARTCharPutNonBlocking</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, sw_uart_basic.o(.text), UNUSED)
+
+<P><STRONG><a name="[22be8c0]"></a>SW_UARTCharPut</STRONG> (Thumb, 46 bytes, Stack size 4 bytes, sw_uart_basic.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = SW_UARTCharPut
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22be974]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[31e247c]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[31e2698]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+</UL>
+<BR>[Called By]<UL><LI><a href="#[31e26d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+</UL>
+
+<P><STRONG><a name="[31e2440]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+
+<P><STRONG><a name="[22b8998]"></a>GPIODirModeSet</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, gpio.o(i.GPIODirModeSet))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd510]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[22bd54c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+</UL>
+
+<P><STRONG><a name="[22bd63c]"></a>GPIOIntTypeSet</STRONG> (Thumb, 58 bytes, Stack size 0 bytes, gpio.o(i.GPIOIntTypeSet))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitGPIO
+<LI><a href="#[22be884]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTConfigSetExpClk
+</UL>
+
+<P><STRONG><a name="[22b88e4]"></a>GPIOPadConfigSet</STRONG> (Thumb, 176 bytes, Stack size 0 bytes, gpio.o(i.GPIOPadConfigSet))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd510]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[22bd54c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+</UL>
+
+<P><STRONG><a name="[22bd600]"></a>GPIOPinIntClear</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinIntClear))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd768]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTDisable
+<LI><a href="#[22be848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTEnable
+</UL>
+
+<P><STRONG><a name="[22bd5c4]"></a>GPIOPinIntDisable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinIntDisable), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[22bd768]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTDisable
+</UL>
+
+<P><STRONG><a name="[22bd588]"></a>GPIOPinIntEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinIntEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitGPIO
+<LI><a href="#[22be884]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTConfigSetExpClk
+</UL>
+
+<P><STRONG><a name="[22bd54c]"></a>GPIOPinTypeGPIOInput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOInput))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIOPinTypeGPIOInput
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22b88e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<LI><a href="#[22b8998]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22bd858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitGPIO
+<LI><a href="#[22be884]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTConfigSetExpClk
+</UL>
+
+<P><STRONG><a name="[22bd510]"></a>GPIOPinTypeGPIOOutput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOOutput))
+<BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIOPinTypeGPIOOutput
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22b88e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<LI><a href="#[22b8998]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22bd858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitGPIO
+<LI><a href="#[22be884]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTConfigSetExpClk
+</UL>
+
+<P><STRONG><a name="[22bd4d4]"></a>GPIOPinWrite</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinWrite))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitGPIO
+<LI><a href="#[22be884]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTConfigSetExpClk
+</UL>
+
+<P><STRONG><a name="[22bd498]"></a>IntEnable</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, interrupt.o(i.IntEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[22be848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTEnable
+</UL>
+
+<P><STRONG><a name="[22be938]"></a>IntMasterEnable</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupt.o(i.IntMasterEnable))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IntMasterEnable
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22b6184]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPUcpsie
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22be974]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[22bd45c]"></a>IntPrioritySet</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, interrupt.o(i.IntPrioritySet))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitTxRxTimers
+</UL>
+
+<P><STRONG><a name="[22be80c]"></a>SysCtlClockGet</STRONG> (Thumb, 514 bytes, Stack size 8 bytes, sysctl.o(i.SysCtlClockGet))
+<BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = SysCtlClockGet
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22be974]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[22be7d0]"></a>SysCtlClockSet</STRONG> (Thumb, 310 bytes, Stack size 24 bytes, sysctl.o(i.SysCtlClockSet))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SysCtlClockSet
+</UL>
+<BR>[Calls]<UL><LI><a href="#[22b1918]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlDelay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22be974]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[22be794]"></a>SysCtlLDOSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sysctl.o(i.SysCtlLDOSet))
+<BR><BR>[Called By]<UL><LI><a href="#[22be974]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[22bd420]"></a>SysCtlPeripheralEnable</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, sysctl.o(i.SysCtlPeripheralEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitTxRxTimers
+<LI><a href="#[22bd858]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitGPIO
+<LI><a href="#[22be884]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTConfigSetExpClk
+</UL>
+
+<P><STRONG><a name="[22bd3e4]"></a>TimerConfigure</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, timer.o(i.TimerConfigure))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitTxRxTimers
+</UL>
+
+<P><STRONG><a name="[22bd3a8]"></a>TimerDisable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, timer.o(i.TimerDisable), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[22bd768]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTDisable
+</UL>
+
+<P><STRONG><a name="[22bd36c]"></a>TimerEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, timer.o(i.TimerEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[22be848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTEnable
+</UL>
+
+<P><STRONG><a name="[22bd330]"></a>TimerIntEnable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, timer.o(i.TimerIntEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[22be848]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTEnable
+</UL>
+
+<P><STRONG><a name="[22bd2f4]"></a>TimerLoadSet</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, timer.o(i.TimerLoadSet))
+<BR><BR>[Called By]<UL><LI><a href="#[22bd81c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SW_UARTInitTxRxTimers
+</UL>
+
+<P><STRONG><a name="[31e2080]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[31e2044]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[31e2008]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+<P>
+<H3>
+Local Symbols
+</H3>
+<P><STRONG><a name="[22bf7fc]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[22bf7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22bf7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[22bf7c0]"></a>FaultISR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[22bf7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22bf7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
+</UL>
+<P><STRONG><a name="[22bf784]"></a>IntDefaultHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_rvmdk.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[22bf784]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[22bf784]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
+</UL><P>
+<H3>
+Undefined Global Symbols
+</H3><HR></body></html>

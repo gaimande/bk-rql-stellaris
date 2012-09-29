@@ -1,0 +1,22 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\Code Project\Stellaris Code\UARTx\sw01270.uvproj
+Project File Date:  09/26/2012
+
+<h2>Output:</h2>
+Build target 'sw01270'
+compiling sw01270.c...
+linking...
+Program Size: Code=3294 RO-data=786 RW-data=48 ZI-data=336  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\rvmdk\sw01270.bin .\rvmdk\sw01270.axf
+".\rvmdk\sw01270.axf" - 0 Error(s), 0 Warning(s).
+Build target 'sw01270'
+linking...
+Program Size: Code=3294 RO-data=786 RW-data=48 ZI-data=336  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\rvmdk\sw01270.bin .\rvmdk\sw01270.axf
+".\rvmdk\sw01270.axf" - 0 Error(s), 0 Warning(s).

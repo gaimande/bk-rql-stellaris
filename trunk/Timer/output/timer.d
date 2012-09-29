@@ -1,0 +1,13 @@
+.\output\timer.o: timer.c
+.\output\timer.o: C:\StellarisWare\inc/lm3s9790.h
+.\output\timer.o: C:\StellarisWare\inc/hw_ints.h
+.\output\timer.o: C:\StellarisWare\inc/hw_memmap.h
+.\output\timer.o: C:\StellarisWare\inc/hw_types.h
+.\output\timer.o: C:\StellarisWare\driverlib/debug.h
+.\output\timer.o: C:\StellarisWare\driverlib/gpio.h
+.\output\timer.o: C:\StellarisWare\driverlib/pin_map.h
+.\output\timer.o: C:\StellarisWare\driverlib/interrupt.h
+.\output\timer.o: C:\StellarisWare\driverlib/rom.h
+.\output\timer.o: C:\StellarisWare\driverlib/sysctl.h
+.\output\timer.o: C:\StellarisWare\driverlib/timer.h
+.\output\timer.o: C:\StellarisWare\utils/uartstdio.h

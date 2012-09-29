@@ -1,0 +1,3 @@
+--cpu Cortex-M3 ".\output\startup.o" ".\output\timer.o" ".\output\uartstdio.o" "C:\StellarisWare\driverlib\rvmdk-cm3\driverlib-cm3.lib" --library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x20000000 --entry Reset_Handler --first __Vectors --strict --entry Reset_Handler --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\timers.map" -o ".\output\timers.axf"
