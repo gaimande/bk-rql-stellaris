@@ -227,17 +227,17 @@ main(void)
 	GLCD_OUT_STR(40,1,"Minh THu MT",1);
 	GLCD_DRW_LINE(2,2,8,8,1);
     GLCD_DISPLAY();
-    
+    ROM_UARTCharPutNonBlocking(UART1_BASE,'D');
     //
     // Loop forever echoing data through the UART.
-    //
+    //	   
 	while(1)
 	{
 		GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
-		UARTCharPut(UART0_BASE, 'A');
-		for(ulLoop = 0; ulLoop < 10000000; ulLoop++)
-        {
-        }	
+		//UARTCharPut(UART0_BASE, 'A');
+		//for(ulLoop = 0; ulLoop < 10000000; ulLoop++)
+        //{
+        //}	
 	}
 	while(1)
 	{

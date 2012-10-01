@@ -76,3 +76,549 @@ Program Size: Code=3292 RO-data=612 RW-data=488 ZI-data=1280
 FromELF: creating hex file...
 User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
 ".\output\UART.axf" - 0 Error(s), 20 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(573): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(598): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(613): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(615): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(632): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(639): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(642): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(130): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                         GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);   
+UART.c:                                                                 ^
+UART.c(236): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                         ^
+UART.c(242): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(249): warning:  #128-D: loop is not reachable from preceding code
+UART.c:       while(1)
+UART.c:       ^
+UART.c(172): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 20 warnings, 0 errors
+linking...
+Program Size: Code=3260 RO-data=612 RW-data=488 ZI-data=1280  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 20 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(573): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(598): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(613): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(615): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(632): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(639): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(642): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(130): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                         GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);   
+UART.c:                                                                 ^
+UART.c(230): warning:  #2548-D: multicharacter character literal (potential portability problem)
+UART.c:       ROM_UARTCharPutNonBlocking(UART1_BASE,'ABCD');
+UART.c:                                             ^
+UART.c(230): warning:  #69-D: integer conversion resulted in truncation
+UART.c:       ROM_UARTCharPutNonBlocking(UART1_BASE,'ABCD');
+UART.c:                                             ^
+UART.c(236): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                         ^
+UART.c(242): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(249): warning:  #128-D: loop is not reachable from preceding code
+UART.c:       while(1)
+UART.c:       ^
+UART.c(172): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 22 warnings, 0 errors
+linking...
+Program Size: Code=3268 RO-data=612 RW-data=488 ZI-data=1280  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 22 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(573): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(598): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(613): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(615): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(632): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(639): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(642): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(130): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                         GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);   
+UART.c:                                                                 ^
+UART.c(230): error:  #167: argument of type "char *" is incompatible with parameter of type "unsigned char"
+UART.c:       ROM_UARTCharPutNonBlocking(UART1_BASE,"ABCD");
+UART.c:                                             ^
+UART.c(236): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                         ^
+UART.c(242): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(249): warning:  #128-D: loop is not reachable from preceding code
+UART.c:       while(1)
+UART.c:       ^
+UART.c(172): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 20 warnings, 1 error
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(573): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(598): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(613): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(615): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(632): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(639): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(642): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(130): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                         GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);   
+UART.c:                                                                 ^
+UART.c(230): error:  #167: argument of type "char *" is incompatible with parameter of type "unsigned char"
+UART.c:       ROM_UARTCharPutNonBlocking(UART1_BASE,"ABCD");
+UART.c:                                             ^
+UART.c(236): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                         ^
+UART.c(242): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(249): warning:  #128-D: loop is not reachable from preceding code
+UART.c:       while(1)
+UART.c:       ^
+UART.c(172): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 20 warnings, 1 error
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(573): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(598): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(613): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(615): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(632): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(639): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(642): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(130): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                         GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);   
+UART.c:                                                                 ^
+UART.c(230): error:  #167: argument of type "char *" is incompatible with parameter of type "unsigned char"
+UART.c:       ROM_UARTCharPutNonBlocking(UART1_BASE,"ABCD");
+UART.c:                                             ^
+UART.c(236): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                         ^
+UART.c(242): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(249): warning:  #128-D: loop is not reachable from preceding code
+UART.c:       while(1)
+UART.c:       ^
+UART.c(172): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 20 warnings, 1 error
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(573): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(598): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(613): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(615): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(632): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(639): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(642): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(130): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                         GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);   
+UART.c:                                                                 ^
+UART.c(230): error:  #167: argument of type "char *" is incompatible with parameter of type "unsigned char"
+UART.c:       ROM_UARTCharPutNonBlocking(UART1_BASE,"D");
+UART.c:                                             ^
+UART.c(236): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                         ^
+UART.c(242): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(249): warning:  #128-D: loop is not reachable from preceding code
+UART.c:       while(1)
+UART.c:       ^
+UART.c(172): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 20 warnings, 1 error
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(573): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(598): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(613): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(615): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(632): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(639): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(642): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(130): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                         GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);   
+UART.c:                                                                 ^
+UART.c(236): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                         ^
+UART.c(242): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(249): warning:  #128-D: loop is not reachable from preceding code
+UART.c:       while(1)
+UART.c:       ^
+UART.c(172): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 20 warnings, 0 errors
+linking...
+Program Size: Code=3304 RO-data=612 RW-data=488 ZI-data=1280  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 20 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(573): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(598): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char ) glcd_font;
+glcd.h:                             ^
+glcd.h(613): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(615): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR(glcd_x, glcd_y, basic_font, *glcd_str);
+glcd.h:                                                       ^
+glcd.h(632): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_SET((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(639): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *"
+glcd.h:                         GLCD_CHAR_CLR((glcd_x + (i-1)*6), glcd_y, basic_font, glcd_temp);
+glcd.h:                                                                   ^
+glcd.h(642): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(130): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                         GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);   
+UART.c:                                                                 ^
+UART.c(236): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                         ^
+UART.c(242): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(249): warning:  #128-D: loop is not reachable from preceding code
+UART.c:       while(1)
+UART.c:       ^
+UART.c(172): warning:  #177-D: variable "sRect" was declared but never referenced
+UART.c:       tRectangle sRect;
+UART.c:                  ^
+UART.c: UART.c: 20 warnings, 0 errors
+linking...
+Program Size: Code=3268 RO-data=612 RW-data=488 ZI-data=1280  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 20 Warning(s).
