@@ -1,4 +1,4 @@
-#include<math.h>
+#include <math.h>
 #include "inc/lm3s9790.h"
 #include "inc/hw_types.h"
 #include "inc/hw_memmap.h"
@@ -14,7 +14,7 @@ unsigned int glcd_address;
 unsigned char glcd_column = 0;
 unsigned char glcd_line = 0;
 
-unsigned char basic_font[] =
+const char basic_font[] =
 {
 	0x00,0x00,0x00,0x00,0x00,		// Code for  
 	0x00,0x00,0x4F,0x00,0x00,		// Code for !
@@ -261,9 +261,9 @@ void GLCD_OUT_CMD(unsigned char glcd_cmd)
 	GPIOPinWrite(EN_PORT,EN_PIN,EN_PIN);
 	
 	DATA = glcd_cmd;
-	delayTime(10);
+	delayTime(100);
 	DATA = glcd_cmd;
-	delayTime(10);
+	delayTime(100);
 	DATA = glcd_cmd;
 	DATA = glcd_cmd;
 	
@@ -276,9 +276,9 @@ void GLCD_OUT_DATA(unsigned char glcd_data)
 	GPIOPinWrite(EN_PORT,EN_PIN,EN_PIN);
 	
 	DATA = glcd_data;
-	delayTime(10);
+	delayTime(100);
 	DATA = glcd_data;
-	delayTime(10);
+	delayTime(100);
 	DATA = glcd_data;
 	
 	GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
@@ -555,7 +555,7 @@ void GLCD_FILL(unsigned char black_white)
 		}
 }	
 
-unsigned int GLCD_CHAR_SET(unsigned char glcd_x, unsigned char glcd_y, char * glcd_font, unsigned char num)
+unsigned int GLCD_CHAR_SET(unsigned char glcd_x, unsigned char glcd_y, const char * glcd_font, unsigned char num)
 {
 	unsigned char i;
 	unsigned char c;
@@ -570,7 +570,8 @@ unsigned int GLCD_CHAR_SET(unsigned char glcd_x, unsigned char glcd_y, char * gl
 		
 		for(i=0;i<5;i++)
 		{
-			c = (unsigned char ) glcd_font;
+			//c = pgm_read_byte (glcd_font);
+			c = (unsigned char)glcd_font;
 			glcd_buff[add] |= (c << glcd_y);
 			glcd_buff[add + 128] |= (c >> (8 - glcd_y));
 			add++;
@@ -580,7 +581,7 @@ unsigned int GLCD_CHAR_SET(unsigned char glcd_x, unsigned char glcd_y, char * gl
 	return (glcd_x + 6);
 }
 
-unsigned int GLCD_CHAR_CLR(unsigned char glcd_x, unsigned char glcd_y, char * glcd_font, unsigned char num)
+unsigned int GLCD_CHAR_CLR(unsigned char glcd_x, unsigned char glcd_y, const char * glcd_font, unsigned char num)
 {
 	unsigned char i;
 	unsigned char c;
@@ -595,7 +596,8 @@ unsigned int GLCD_CHAR_CLR(unsigned char glcd_x, unsigned char glcd_y, char * gl
 		
 		for(i=0;i<5;i++)
 		{
-			c = (unsigned char ) glcd_font;
+			//c = pgm_read_byte (glcd_font);
+			c = (unsigned short int)glcd_font;
 			glcd_buff[add] &= ((c << glcd_y) ^ 0xFF);
 			glcd_buff[add + 128] &= ((c >> (8 - glcd_y)) ^ 0xFF);
 			add++;
@@ -618,7 +620,28 @@ unsigned int GLCD_OUT_STR(unsigned char glcd_x, unsigned char glcd_y, char *glcd
 	}
 	return (glcd_x);
 }
-
+/*
+unsigned int GLCD_OUT_PGM(unsigned char glcd_x, unsigned char glcd_y, const char * glcd_ptr, unsigned char black_white)
+{
+	char glcd_temp;
+	glcd_temp = pgm_read_byte(glcd_ptr++);
+	if(black_white)
+		while(glcd_temp)
+		{
+			GLCD_CHAR_SET(glcd_x, glcd_y, basic_font, glcd_temp);
+			glcd_x = glcd_x + 6;
+			glcd_temp = pgm_read_byte(glcd_ptr++);
+		}
+	else
+		while(glcd_temp)
+		{
+			GLCD_CHAR_CLR(glcd_x, glcd_y, basic_font, glcd_temp);
+			glcd_x = glcd_x + 6;
+			glcd_temp = pgm_read_byte(glcd_ptr++);
+		}
+	return (glcd_x);
+}
+*/
 unsigned int GLCD_OUT_DEC(unsigned char glcd_x, unsigned char glcd_y, unsigned long int glcd_n, unsigned char glcd_length, unsigned char black_white)
 {
 	unsigned char glcd_temp;

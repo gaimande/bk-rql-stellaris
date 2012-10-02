@@ -37,6 +37,55 @@
 #include "grlib/grlib.h"
 #include "glcd.h"
 
+
+//Global Variable
+const char keyPadMatrix[] = 
+{ 
+    '1','2','3','U',
+    '4','5','6','D',
+    '7','8','9','<',
+    'T','0','C','@',
+    0xFF
+};
+
+char ScanKeyMatrix()
+{
+    // This routine returns the first key found to be
+    // pressed during the scan.
+    char key = 0;
+	int row;
+	
+    for( row = 0x10; row < 0x100; row <<= 1 )
+    {     
+        {   // turn on row output
+            //row1port = row.0;
+            //row2port = row.1;
+            //row3port = row.2;
+            //row4port = row.3;
+			GPIOPinWrite(GPIO_PORTC_BASE,GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7,row);
+        }   
+
+        // read colums - break when key press detected
+		
+        if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_0 ) )
+            break;
+        key++;
+        if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_1 ) )
+            break;
+        key++;
+        if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_2 ) )
+            break;
+        key++;
+		if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_3 ) )
+            break;
+        key++;
+    }
+	
+	GPIOPinWrite(GPIO_PORTC_BASE,GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7,0);
+        
+    return keyPadMatrix[key]; 
+}
+
 //*****************************************************************************
 //
 //! \addtogroup example_list
@@ -49,7 +98,7 @@
 //
 //*****************************************************************************
 
-
+char i,j;
 //*****************************************************************************
 //
 // The error routine that is called if the driver library encounters an error.
@@ -70,6 +119,7 @@ SysTickIntHandler(void)
     // Update the Systick interrupt counter.
     g_ulCounter++;
 }
+
 //this called from outside 
 void delay_ms (unsigned int milliseconds)
 { 
@@ -120,21 +170,19 @@ UARTIntHandler(void)
     //
     while(ROM_UARTCharsAvail(UART0_BASE))
     {
-        //
-        // Read the next character from the UART and write it back to the UART.
-        //
-        //ROM_UARTCharPutNonBlocking(UART0_BASE,
-        //                           UARTCharGetNonBlocking(UART0_BASE));
-		if(UARTCharGetNonBlocking(UART0_BASE)=='A')
-		{
-			GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);	
-			for(ulLoop = 0; ulLoop < 10000000; ulLoop++)
-        	{
-        	}
-			GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);	
-			for(ulLoop = 0; ulLoop < 10000000; ulLoop++)
-        	{
-        	}
+		switch(UARTCharGetNonBlocking(UART0_BASE)){
+			case 'A':
+				//Start pump
+				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+				break;
+			case 'F':
+				//Turn off pump
+				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);	
+				break;
+			case 'S':
+				//Turn off pump for waiting Hemoclean
+				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);		
+				break;
 		}
 		ROM_UARTCharPutNonBlocking(UART1_BASE,UARTCharGetNonBlocking(UART0_BASE));
     }
@@ -156,7 +204,7 @@ UARTSend(const unsigned char *pucBuffer, unsigned long ulCount)
         //
         // Write the next character to the UART.
         //
-        ROM_UARTCharPutNonBlocking(UART1_BASE, *pucBuffer++);
+        ROM_UARTCharPut(UART1_BASE, *pucBuffer++);
     }
 }
 
@@ -169,13 +217,15 @@ int
 main(void)
 {
 	volatile unsigned long ulLoop;
-    tRectangle sRect;
-
+	char key_return;
+	int fuck = 3;
+	int row = 2;
     //
 	// Set the clocking to run directly from the internal crystal/oscillator.
 	//
 	ROM_SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_OSC | SYSCTL_OSC_INT | SYSCTL_MAIN_OSC_DIS |
 		SYSCTL_XTAL_16MHZ);
+		
 	// Enable IO port for UARTs
 	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
 	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
@@ -184,8 +234,17 @@ main(void)
 	GPIOPinConfigure(GPIO_PA1_U0TX);
 	GPIOPinConfigure(GPIO_PD2_U1RX);
 	GPIOPinConfigure(GPIO_PD3_U1TX);
+	
+	//Matrix keypad configure
+	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOC);
+	GPIOPinTypeGPIOOutput(GPIO_PORTC_BASE,GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7); //Configure ROWs are output
+
+	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+	GPIOPinTypeGPIOInput(GPIO_PORTE_BASE,GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3); //Configure COLUMNs are input	
+	GPIOPadConfigSet(GPIO_PORTE_BASE, GPIO_PIN_0 | GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3,
+			GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
     //
-    // Enable the (non-GPIO) peripherals used by this example.  PinoutSet()
+    // Enable the (non-GPIO) peripherals used by this example. 
     // already enabled GPIO Port A.
     //
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
@@ -202,7 +261,7 @@ main(void)
     ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
 	ROM_GPIOPinTypeUART(GPIO_PORTD_BASE, GPIO_PIN_2 | GPIO_PIN_3);
     //
-    // Configure the UART for 9600, 8-N-1 operation.
+    // Configure UARTs for 9600, 8-N-1 operation.
     //
     ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 9600,
                             (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE |
@@ -212,7 +271,7 @@ main(void)
                              UART_CONFIG_PAR_NONE));
 
     //
-    // Enable the UART interrupt.
+    // Enable UARTs interrupt.
     //
     ROM_IntEnable(INT_UART0);
     ROM_UARTIntEnable(UART0_BASE, UART_INT_RX | UART_INT_RT);
@@ -223,21 +282,33 @@ main(void)
     //
     GLCD_INIT();
 	GLCD_FILL(0);
-    GLCD_DRW_REC_SOLID(45,45,20,20,1);
-	GLCD_OUT_STR(40,1,"Minh THu MT",1);
-	GLCD_DRW_LINE(2,2,8,8,1);
+    //GLCD_DRW_REC_SOLID(45,45,20,20,1);
+	//GLCD_CHAR_SET(0, 0, basic_font, 'A');
+	//GLCD_OUT_STR(40,1,"Minh THu MT",1);
+	//GLCD_DRW_LINE(2,2,8,8,1);
+	//GLCD_OUT_DEC(60, 0 ,1234 ,4, 1);
     GLCD_DISPLAY();
-    ROM_UARTCharPutNonBlocking(UART1_BASE,'D');
-    //
-    // Loop forever echoing data through the UART.
-    //	   
+	//ROM_UARTCharPutNonBlocking(UART1_BASE,fuck);
+	UARTSend((unsigned char *)fuck, 1);
+	//Send notification
+	UARTSend((unsigned char *)"Automated Dialyzer and Bloodline Washing System", 47);
+
+	//GPIOPinWrite(GPIO_PORTC_BASE,GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7,0x20);
+	//while(1);
 	while(1)
 	{
-		GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
-		//UARTCharPut(UART0_BASE, 'A');
-		//for(ulLoop = 0; ulLoop < 10000000; ulLoop++)
-        //{
-        //}	
+		 key_return = ScanKeyMatrix();
+		 if(key_return != 0xFF)
+		 	ROM_UARTCharPutNonBlocking(UART1_BASE,key_return);
+	}
+	while(1)
+	{
+		if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_3 ) )
+		{
+			SysCtlDelay(500000);	//delay 40ms	
+			if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_3 ) )			
+				UARTSend((unsigned char *)"\nPin 3 is turned on", 19);
+		}
 	}
 	while(1)
 	{
@@ -246,15 +317,5 @@ main(void)
         {
         }
 	}
-    while(1)
-    {
-		UARTSend((unsigned char *)"Enter text: ", 12);
-		//
-        // Delay for a bit.
-        //
-        for(ulLoop = 0; ulLoop < 10000000; ulLoop++)
-        {
-        }
-		//delay_ms(1);
-    }
+
 }
