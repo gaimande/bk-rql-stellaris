@@ -46,6 +46,8 @@ extern unsigned char menu_status[1024];
 extern unsigned char menu_setup[1024];
 extern unsigned char menu_history[1024];
 extern unsigned char menu_factory[1024];
+extern unsigned char setup_forward[1024];
+extern unsigned char setup_elchem_frd[1024];
 const char keyPadMatrix[] = 
 { 
     '1','2','3','U',
@@ -318,7 +320,12 @@ main(void)
 	SysCtlDelay(5000000);
 	GLCD_IMAGE(menu_factory);
     GLCD_DISPLAY();
-	
+	SysCtlDelay(5000000);
+	GLCD_IMAGE(setup_forward);
+    GLCD_DISPLAY();
+	SysCtlDelay(5000000);
+	GLCD_IMAGE(setup_elchem_frd);
+    GLCD_DISPLAY();
 	//Send notification
 	UARTSend((unsigned char *)"Automated Dialyzer and Bloodline Washing System", 47);
 
