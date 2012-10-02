@@ -48,6 +48,12 @@ extern unsigned char menu_history[1024];
 extern unsigned char menu_factory[1024];
 extern unsigned char setup_forward[1024];
 extern unsigned char setup_elchem_frd[1024];
+extern unsigned char setup_elchem_rsv[1024];
+extern unsigned char setup_elchem_pressure[1024];
+extern unsigned char setup_exit[1024];
+extern unsigned char setup_preservation[1024];
+extern unsigned char setup_pressure[1024];
+extern unsigned char setup_reverse[1024];
 const char keyPadMatrix[] = 
 { 
     '1','2','3','U',
@@ -233,6 +239,7 @@ main(void)
 	char key_return;
 	int row = 2;
 	unsigned long ADC_DATA;
+	char menu_index,setup_index,ok_set;
     //
 	// Set the clocking to run directly from the internal crystal/oscillator.
 	//
@@ -311,6 +318,7 @@ main(void)
 	SysCtlDelay(5000000);
 	GLCD_IMAGE(menu_status);
     GLCD_DISPLAY();
+	/*
 	SysCtlDelay(5000000);
 	GLCD_IMAGE(menu_setup);
     GLCD_DISPLAY();
@@ -326,6 +334,7 @@ main(void)
 	SysCtlDelay(5000000);
 	GLCD_IMAGE(setup_elchem_frd);
     GLCD_DISPLAY();
+	/*
 	//Send notification
 	UARTSend((unsigned char *)"Automated Dialyzer and Bloodline Washing System", 47);
 
@@ -353,12 +362,143 @@ main(void)
 	ADCSequenceDataGet(ADC_BASE, 0, &ADC_DATA);
 	UARTprintf("Testing ADC0 seq 0 on DMA channel %d\n",ADC_DATA);
 	*/
+/*	
 	while(1)
 	{
-		 key_return = ScanKeyMatrix();
-		 if(key_return != 0xFF)
-		 	ROM_UARTCharPutNonBlocking(UART1_BASE,key_return);
+		key_return = ScanKeyMatrix();
+		if(key_return != 0xFF)
+			ROM_UARTCharPutNonBlocking(UART1_BASE,key_return);
+	}	
+	*/	
+	menu_index = 1;
+	ok_set = 0;
+	
+	main_menu:
+	while(1)
+	{
+		switch(ScanKeyMatrix())
+		{
+			case 'U':
+				if(menu_index==1)
+				{
+					menu_index = 4;
+					break;
+				}
+				else
+				menu_index--;
+				break;
+			case 'D':	
+				if(menu_index==4)
+				{
+					menu_index = 1;
+					break;
+				}
+				else
+				menu_index++;
+				break;
+			case '@':
+				ok_set = 1;
+				break;
+		}
+		switch(menu_index)
+		{
+			case 1:				
+				GLCD_IMAGE(menu_status);
+				GLCD_DISPLAY();
+				break;
+			case 2:	
+				if(ok_set)
+				{
+					GLCD_IMAGE(setup_forward);
+					GLCD_DISPLAY();
+					ok_set = 0;
+					setup_index = 1;
+					goto setup_menu;
+				}				
+				GLCD_IMAGE(menu_setup);
+				GLCD_DISPLAY();
+				break;
+			case 3:	
+				GLCD_IMAGE(menu_history);
+				GLCD_DISPLAY();
+				break;	
+			case 4:	
+				GLCD_IMAGE(menu_factory);
+				GLCD_DISPLAY();
+				break;					
+		}
+
 	}
+	
+	setup_menu:
+	while(1)
+	{
+		switch(ScanKeyMatrix())
+		{
+			case 'U':
+				if(setup_index==1)
+					break;
+				else
+				setup_index--;
+				break;
+			case 'D':	
+				if(setup_index==8)
+					break;
+				else
+				setup_index++;
+				break;
+			case '@':
+				ok_set = 1;
+				break;
+		}
+		switch(setup_index)
+		{
+			case 1:				
+				GLCD_IMAGE(setup_forward);
+				GLCD_DISPLAY();
+				break;
+			case 2:				
+				GLCD_IMAGE(setup_reverse);
+				GLCD_DISPLAY();
+				break;
+			case 3:	
+				GLCD_IMAGE(setup_pressure);
+				GLCD_DISPLAY();
+				break;	
+			case 4:	
+				GLCD_IMAGE(setup_preservation);
+				GLCD_DISPLAY();
+				break;		
+			case 5:	
+				GLCD_IMAGE(setup_elchem_frd);
+				GLCD_DISPLAY();
+				break;
+			case 6:	
+				GLCD_IMAGE(setup_elchem_rsv);
+				GLCD_DISPLAY();
+				break;
+			case 7:	
+				GLCD_IMAGE(setup_elchem_pressure);
+				GLCD_DISPLAY();
+				break;
+			case 8:	
+				if(ok_set)
+				{
+					menu_index = 2;
+					setup_index = 0;
+					ok_set = 0;
+					goto main_menu;	
+				}	
+				GLCD_IMAGE(setup_exit);
+				GLCD_DISPLAY();
+				break;
+		}
+		
+	}
+	
+	
+	
+	
 	while(1)
 	{
 		if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_3 ) )
