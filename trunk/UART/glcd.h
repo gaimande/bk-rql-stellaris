@@ -663,3 +663,11 @@ unsigned int GLCD_OUT_DEC(unsigned char glcd_x, unsigned char glcd_y, unsigned l
 		}
 	return (glcd_x + glcd_length*6);
 }
+
+void GLCD_IMAGE(unsigned char * image)
+{
+	int i;
+	for(i=0;i<1024;i++)
+		glcd_buff[i] = image[i];
+
+}
