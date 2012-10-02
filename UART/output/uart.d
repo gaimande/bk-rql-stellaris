@@ -15,3 +15,5 @@
 .\output\uart.o: C:\StellarisWare\grlib/grlib.h
 .\output\uart.o: glcd.h
 .\output\uart.o: C:\Keil\ARM\RV31\INC\math.h
+.\output\uart.o: C:\StellarisWare\utils/uartstdio.h
+.\output\uart.o: C:\StellarisWare\driverlib/adc.h

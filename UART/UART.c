@@ -36,7 +36,8 @@
 #include "driverlib/rom_map.h"
 #include "grlib/grlib.h"
 #include "glcd.h"
-
+#include "utils/uartstdio.h"
+#include "driverlib/adc.h"
 
 //Global Variable
 const char keyPadMatrix[] = 
@@ -282,7 +283,7 @@ main(void)
     //
     GLCD_INIT();
 	GLCD_FILL(0);
-    //GLCD_DRW_REC_SOLID(45,45,20,20,1);
+    GLCD_DRW_REC_SOLID(45,45,20,20,1);
 	//GLCD_CHAR_SET(0, 0, basic_font, 'A');
 	//GLCD_OUT_STR(40,1,"Minh THu MT",1);
 	//GLCD_DRW_LINE(2,2,8,8,1);
@@ -295,6 +296,8 @@ main(void)
 
 	//GPIOPinWrite(GPIO_PORTC_BASE,GPIO_PIN_4 | GPIO_PIN_5 | GPIO_PIN_6 | GPIO_PIN_7,0x20);
 	//while(1);
+	UARTStdioInit(1);
+	UARTprintf("\nuDMA/ADC Test %d",4664);
 	while(1)
 	{
 		 key_return = ScanKeyMatrix();
