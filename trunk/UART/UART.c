@@ -172,7 +172,7 @@ UARTIntHandler(void)
     while(ROM_UARTCharsAvail(UART0_BASE))
     {
 		switch(UARTCharGetNonBlocking(UART0_BASE)){
-			case 'A':
+			case 'P':
 				//Start pump
 				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
 				break;
@@ -180,6 +180,10 @@ UARTIntHandler(void)
 				//Turn off pump
 				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);	
 				break;
+			case 'H':
+				//Turn off pump for fill Hemoclean from Mixing Module
+				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);	
+				break;	
 			case 'S':
 				//Turn off pump for waiting Hemoclean
 				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);		
@@ -221,6 +225,7 @@ main(void)
 	char key_return;
 	int fuck = 3;
 	int row = 2;
+	unsigned long ADC_DATA;
     //
 	// Set the clocking to run directly from the internal crystal/oscillator.
 	//
@@ -250,7 +255,16 @@ main(void)
     //
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
 	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1);
-
+	
+	/*
+	//
+    // Configure the ADC to get value from conductivity sensor
+    //
+    ADCSequenceConfigure(ADC_BASE, 0, ADC_TRIGGER_PROCESSOR, 0);
+    ADCSequenceStepConfigure(ADC0_BASE, 0, 0,
+                             ADC_CTL_CH0 | ADC_CTL_IE | ADC_CTL_END);
+    ADCSequenceEnable(ADC0_BASE, 0);
+	*/
     //
     // Enable processor interrupts.
     //
@@ -286,11 +300,10 @@ main(void)
     GLCD_DRW_REC_SOLID(45,45,20,20,1);
 	//GLCD_CHAR_SET(0, 0, basic_font, 'A');
 	//GLCD_OUT_STR(40,1,"Minh THu MT",1);
-	//GLCD_DRW_LINE(2,2,8,8,1);
+	GLCD_DRW_LINE(2,2,8,8,1);
 	//GLCD_OUT_DEC(60, 0 ,1234 ,4, 1);
     GLCD_DISPLAY();
-	//ROM_UARTCharPutNonBlocking(UART1_BASE,fuck);
-	UARTSend((unsigned char *)fuck, 1);
+
 	//Send notification
 	UARTSend((unsigned char *)"Automated Dialyzer and Bloodline Washing System", 47);
 
@@ -298,6 +311,26 @@ main(void)
 	//while(1);
 	UARTStdioInit(1);
 	UARTprintf("\nuDMA/ADC Test %d",4664);
+	
+	/*
+	//
+    // Read the data from the ADC.
+    //
+	//
+	// Trigger the sample sequence.
+	//
+	ADCProcessorTrigger(ADC_BASE, 0);
+	
+	//
+	// Wait until the sample sequence has completed.
+	//
+	while(!ADCIntStatus(ADC_BASE, 0, false)){}
+	//
+	// Read the value from the ADC.
+	//
+	ADCSequenceDataGet(ADC_BASE, 0, &ADC_DATA);
+	UARTprintf("Testing ADC0 seq 0 on DMA channel %d\n",ADC_DATA);
+	*/
 	while(1)
 	{
 		 key_return = ScanKeyMatrix();
