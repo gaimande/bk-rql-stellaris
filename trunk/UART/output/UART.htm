@@ -3,346 +3,380 @@
 <title>Static Call Graph - [.\output\UART.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\output\UART.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT4.0 [Build 728]: Last Updated: Tue Oct 02 17:30:55 2012
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, RVCT4.0 [Build 728]: Last Updated: Tue Oct 02 19:35:25 2012
 <BR><P>
-<H3>Maximum Stack Usage =         64 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        128 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-main &rArr; GLCD_DISPLAY &rArr; GLCD_OUT_DATA
+main &rArr; UARTprintf &rArr; UARTwrite
 <P>
 <H3>
 Functions with no stack information
 </H3><UL>
- <LI><a href="#[220e61c]">Reset_Handler</a>
- <LI><a href="#[220e7fc]">NmiSR</a>
- <LI><a href="#[220e7c0]">FaultISR</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe61c]">Reset_Handler</a>
+ <LI><a href="#[21fe7fc]">NmiSR</a>
+ <LI><a href="#[21fe7c0]">FaultISR</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
 </UL>
 </UL>
 <P>
 <H3>
 Mutually Recursive functions
-</H3> <LI><a href="#[220e7fc]">NmiSR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[220e7fc]">NmiSR</a><BR>
- <LI><a href="#[220e7c0]">FaultISR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[220e7c0]">FaultISR</a><BR>
- <LI><a href="#[220e784]">IntDefaultHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[220e784]">IntDefaultHandler</a><BR>
+</H3> <LI><a href="#[21fe7fc]">NmiSR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[21fe7fc]">NmiSR</a><BR>
+ <LI><a href="#[21fe7c0]">FaultISR</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[21fe7c0]">FaultISR</a><BR>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>&nbsp;&nbsp;&nbsp;&rArr;&nbsp;&nbsp;&nbsp;<a href="#[21fe784]">IntDefaultHandler</a><BR>
 </UL>
 <P>
 <H3>
 Function Pointers
 </H3><UL>
- <LI><a href="#[220e61c]">Reset_Handler</a>
- <LI><a href="#[220e7fc]">NmiSR</a>
- <LI><a href="#[220e7c0]">FaultISR</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e5a4]">UARTIntHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220e784]">IntDefaultHandler</a>
- <LI><a href="#[220a65c]">main</a>
+ <LI><a href="#[21fe61c]">Reset_Handler</a>
+ <LI><a href="#[21fe7fc]">NmiSR</a>
+ <LI><a href="#[21fe7c0]">FaultISR</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe5a4]">UARTIntHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fe784]">IntDefaultHandler</a>
+ <LI><a href="#[21fa47c]">main</a>
 </UL>
 <P>
 <H3>
 Global Symbols
 </H3>
-<P><STRONG><a name="[220e61c]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
-<BR><BR>[Calls]<UL><LI><a href="#[3457804]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
+<P><STRONG><a name="[21fe61c]"></a>Reset_Handler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[34be1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main
 </UL>
 
-<P><STRONG><a name="[3457804]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
-<BR><BR>[Called By]<UL><LI><a href="#[220e61c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
+<P><STRONG><a name="[34be1c0]"></a>__main</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry.o(.ARM.Collect$$$$00000000))
+<BR><BR>[Called By]<UL><LI><a href="#[21fe61c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
 </UL>
 
-<P><STRONG><a name="[3455ef0]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[34bc8ac]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
-<P><STRONG><a name="[3455dc4]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Calls]<UL><LI><a href="#[3454ec4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[34bc780]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Calls]<UL><LI><a href="#[34bb880]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[3455d88]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
-<BR><BR>[Called By]<UL><LI><a href="#[3454ec4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
+<P><STRONG><a name="[34bc744]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<BR><BR>[Called By]<UL><LI><a href="#[34bb880]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[3455c98]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7.o(.ARM.Collect$$$$00000007))
+<P><STRONG><a name="[34bc654]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7.o(.ARM.Collect$$$$00000007))
 
-<P><STRONG><a name="[2202f10]"></a>CPUcpsid</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+<P><STRONG><a name="[21f18cc]"></a>CPUcpsid</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
 
-<P><STRONG><a name="[34581dc]"></a>CPUprimask</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+<P><STRONG><a name="[34beb98]"></a>CPUprimask</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
 
-<P><STRONG><a name="[2202ed4]"></a>CPUcpsie</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, cpu.o(.emb_text))
-<BR><BR>[Called By]<UL><LI><a href="#[220a4b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntMasterEnable
+<P><STRONG><a name="[21f1890]"></a>CPUcpsie</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, cpu.o(.emb_text))
+<BR><BR>[Called By]<UL><LI><a href="#[21fa2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntMasterEnable
 </UL>
 
-<P><STRONG><a name="[345d3a8]"></a>CPUwfi</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+<P><STRONG><a name="[34c3d64]"></a>CPUwfi</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
 
-<P><STRONG><a name="[2202f4c]"></a>CPUbasepriSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+<P><STRONG><a name="[21f1908]"></a>CPUbasepriSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
 
-<P><STRONG><a name="[2202f88]"></a>CPUbasepriGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
+<P><STRONG><a name="[21f1944]"></a>CPUbasepriGet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, cpu.o(.emb_text), UNUSED)
 
-<P><STRONG><a name="[3454ec4]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[3455d88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<P><STRONG><a name="[34bb880]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
+<BR><BR>[Calls]<UL><LI><a href="#[34bc744]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3455dc4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
+<BR>[Called By]<UL><LI><a href="#[34bc780]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[3454e88]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[34bb844]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[220ab84]"></a>GLCD_CS1_ENABLE</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, uart.o(i.GLCD_CS1_ENABLE))
+<P><STRONG><a name="[21fa9a4]"></a>GLCD_CS1_ENABLE</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, uart.o(i.GLCD_CS1_ENABLE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GLCD_CS1_ENABLE
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a4f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<BR>[Calls]<UL><LI><a href="#[21fa314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220ab0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
+<BR>[Called By]<UL><LI><a href="#[21fa92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
 </UL>
 
-<P><STRONG><a name="[220ab48]"></a>GLCD_CS2_ENABLE</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, uart.o(i.GLCD_CS2_ENABLE))
+<P><STRONG><a name="[21fa968]"></a>GLCD_CS2_ENABLE</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, uart.o(i.GLCD_CS2_ENABLE))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GLCD_CS2_ENABLE
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a4f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<BR>[Calls]<UL><LI><a href="#[21fa314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220ab0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
+<BR>[Called By]<UL><LI><a href="#[21fa92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
 </UL>
 
-<P><STRONG><a name="[220ab0c]"></a>GLCD_DISPLAY</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, uart.o(i.GLCD_DISPLAY))
+<P><STRONG><a name="[21fa92c]"></a>GLCD_DISPLAY</STRONG> (Thumb, 124 bytes, Stack size 24 bytes, uart.o(i.GLCD_DISPLAY))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GLCD_DISPLAY &rArr; GLCD_OUT_DATA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a4f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
-<LI><a href="#[220a8b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_DATA
-<LI><a href="#[220a8f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_CMD
-<LI><a href="#[220ab48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_CS2_ENABLE
-<LI><a href="#[220ab84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_CS1_ENABLE
+<BR>[Calls]<UL><LI><a href="#[21fa314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<LI><a href="#[21fa6d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_DATA
+<LI><a href="#[21fa710]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_CMD
+<LI><a href="#[21fa968]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_CS2_ENABLE
+<LI><a href="#[21fa9a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_CS1_ENABLE
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[220a968]"></a>GLCD_FILL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, uart.o(i.GLCD_FILL))
+<P><STRONG><a name="[21fa800]"></a>GLCD_DRW_REC_SOLID</STRONG> (Thumb, 82 bytes, Stack size 28 bytes, uart.o(i.GLCD_DRW_REC_SOLID))
+<BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = GLCD_DRW_REC_SOLID &rArr; GLCD_POINT_DRW
+</UL>
+<BR>[Calls]<UL><LI><a href="#[21fa5e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_POINT_DRW
+<LI><a href="#[21fa620]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_POINT_CLR
+</UL>
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[21fa788]"></a>GLCD_FILL</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, uart.o(i.GLCD_FILL))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = GLCD_FILL &rArr; GLCD_POINT_DRW
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a7c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_POINT_DRW
-<LI><a href="#[220a800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_POINT_CLR
+<BR>[Calls]<UL><LI><a href="#[21fa5e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_POINT_DRW
+<LI><a href="#[21fa620]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_POINT_CLR
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[220a92c]"></a>GLCD_INIT</STRONG> (Thumb, 228 bytes, Stack size 16 bytes, uart.o(i.GLCD_INIT))
+<P><STRONG><a name="[21fa74c]"></a>GLCD_INIT</STRONG> (Thumb, 228 bytes, Stack size 16 bytes, uart.o(i.GLCD_INIT))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = GLCD_INIT &rArr; GLCD_OUT_CMD
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
-<LI><a href="#[220a4f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
-<LI><a href="#[220a530]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
-<LI><a href="#[220a8f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_CMD
+<BR>[Calls]<UL><LI><a href="#[21fa29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<LI><a href="#[21fa314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<LI><a href="#[21fa350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[21fa710]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_CMD
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[220a8f0]"></a>GLCD_OUT_CMD</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, uart.o(i.GLCD_OUT_CMD))
+<P><STRONG><a name="[21fa710]"></a>GLCD_OUT_CMD</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, uart.o(i.GLCD_OUT_CMD))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GLCD_OUT_CMD
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a4f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<BR>[Calls]<UL><LI><a href="#[21fa314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
-<LI><a href="#[220ab0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
+<BR>[Called By]<UL><LI><a href="#[21fa74c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
+<LI><a href="#[21fa92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
 </UL>
 
-<P><STRONG><a name="[220a8b4]"></a>GLCD_OUT_DATA</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, uart.o(i.GLCD_OUT_DATA))
+<P><STRONG><a name="[21fa6d4]"></a>GLCD_OUT_DATA</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, uart.o(i.GLCD_OUT_DATA))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = GLCD_OUT_DATA
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a4f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<BR>[Calls]<UL><LI><a href="#[21fa314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220ab0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
+<BR>[Called By]<UL><LI><a href="#[21fa92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
 </UL>
 
-<P><STRONG><a name="[220a800]"></a>GLCD_POINT_CLR</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, uart.o(i.GLCD_POINT_CLR))
+<P><STRONG><a name="[21fa620]"></a>GLCD_POINT_CLR</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, uart.o(i.GLCD_POINT_CLR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GLCD_POINT_CLR
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a968]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_FILL
+<BR>[Called By]<UL><LI><a href="#[21fa788]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_FILL
+<LI><a href="#[21fa800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DRW_REC_SOLID
 </UL>
 
-<P><STRONG><a name="[220a7c4]"></a>GLCD_POINT_DRW</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, uart.o(i.GLCD_POINT_DRW))
+<P><STRONG><a name="[21fa5e4]"></a>GLCD_POINT_DRW</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, uart.o(i.GLCD_POINT_DRW))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = GLCD_POINT_DRW
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a968]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_FILL
+<BR>[Called By]<UL><LI><a href="#[21fa788]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_FILL
+<LI><a href="#[21fa800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DRW_REC_SOLID
 </UL>
 
-<P><STRONG><a name="[220579c]"></a>GPIODirModeSet</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, gpio.o(i.GPIODirModeSet))
-<BR><BR>[Called By]<UL><LI><a href="#[220a530]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
-<LI><a href="#[220a56c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+<P><STRONG><a name="[21f4158]"></a>GPIODirModeSet</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, gpio.o(i.GPIODirModeSet))
+<BR><BR>[Called By]<UL><LI><a href="#[21fa350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[21fa38c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
 </UL>
 
-<P><STRONG><a name="[220a620]"></a>GPIOPadConfigSet</STRONG> (Thumb, 176 bytes, Stack size 0 bytes, gpio.o(i.GPIOPadConfigSet))
-<BR><BR>[Called By]<UL><LI><a href="#[220a530]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
-<LI><a href="#[220a56c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
-<LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[21fa440]"></a>GPIOPadConfigSet</STRONG> (Thumb, 176 bytes, Stack size 0 bytes, gpio.o(i.GPIOPadConfigSet))
+<BR><BR>[Called By]<UL><LI><a href="#[21fa350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[21fa38c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+<LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[220a5e4]"></a>GPIOPinConfigure</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinConfigure))
-<BR><BR>[Called By]<UL><LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<P><STRONG><a name="[21fa404]"></a>GPIOPinConfigure</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinConfigure))
+<BR><BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[220a5a8]"></a>GPIOPinRead</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinRead))
-<BR><BR>[Called By]<UL><LI><a href="#[220a788]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScanKeyMatrix
+<P><STRONG><a name="[21fa3c8]"></a>GPIOPinRead</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinRead))
+<BR><BR>[Called By]<UL><LI><a href="#[21fa5a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScanKeyMatrix
 </UL>
 
-<P><STRONG><a name="[220a56c]"></a>GPIOPinTypeGPIOInput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOInput))
+<P><STRONG><a name="[21fa38c]"></a>GPIOPinTypeGPIOInput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOInput))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIOPinTypeGPIOInput
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220579c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
-<LI><a href="#[220a620]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<BR>[Calls]<UL><LI><a href="#[21f4158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+<LI><a href="#[21fa440]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[220a530]"></a>GPIOPinTypeGPIOOutput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOOutput))
+<P><STRONG><a name="[21fa350]"></a>GPIOPinTypeGPIOOutput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOOutput))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = GPIOPinTypeGPIOOutput
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220579c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
-<LI><a href="#[220a620]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<BR>[Calls]<UL><LI><a href="#[21f4158]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+<LI><a href="#[21fa440]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[220a92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
-</UL>
-
-<P><STRONG><a name="[220a4f4]"></a>GPIOPinWrite</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinWrite))
-<BR><BR>[Called By]<UL><LI><a href="#[220a788]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScanKeyMatrix
-<LI><a href="#[220a8b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_DATA
-<LI><a href="#[220a8f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_CMD
-<LI><a href="#[220a92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
-<LI><a href="#[220ab0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
-<LI><a href="#[220ab48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_CS2_ENABLE
-<LI><a href="#[220ab84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_CS1_ENABLE
-<LI><a href="#[220e5a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntHandler
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<LI><a href="#[21fa74c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
 </UL>
 
-<P><STRONG><a name="[220a4b8]"></a>IntMasterEnable</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupt.o(i.IntMasterEnable))
+<P><STRONG><a name="[21fa314]"></a>GPIOPinWrite</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinWrite))
+<BR><BR>[Called By]<UL><LI><a href="#[21fa5a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScanKeyMatrix
+<LI><a href="#[21fa6d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_DATA
+<LI><a href="#[21fa710]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_OUT_CMD
+<LI><a href="#[21fa74c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
+<LI><a href="#[21fa92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
+<LI><a href="#[21fa968]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_CS2_ENABLE
+<LI><a href="#[21fa9a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_CS1_ENABLE
+<LI><a href="#[21fe5a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntHandler
+</UL>
+
+<P><STRONG><a name="[21fa2d8]"></a>IntMasterEnable</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, interrupt.o(i.IntMasterEnable))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = IntMasterEnable
 </UL>
-<BR>[Calls]<UL><LI><a href="#[2202ed4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPUcpsie
+<BR>[Calls]<UL><LI><a href="#[21f1890]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CPUcpsie
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[220a788]"></a>ScanKeyMatrix</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, uart.o(i.ScanKeyMatrix))
+<P><STRONG><a name="[21fa5a8]"></a>ScanKeyMatrix</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, uart.o(i.ScanKeyMatrix))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ScanKeyMatrix
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a4f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
-<LI><a href="#[220a5a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinRead
+<BR>[Calls]<UL><LI><a href="#[21fa314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<LI><a href="#[21fa3c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinRead
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-</UL>
-
-<P><STRONG><a name="[220a47c]"></a>SysCtlPeripheralEnable</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, sysctl.o(i.SysCtlPeripheralEnable))
-<BR><BR>[Called By]<UL><LI><a href="#[220a92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[220a440]"></a>UARTCharGetNonBlocking</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, uart.o(i.UARTCharGetNonBlocking))
-<BR><BR>[Called By]<UL><LI><a href="#[220e5a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntHandler
+<P><STRONG><a name="[21fa29c]"></a>SysCtlPeripheralEnable</STRONG> (Thumb, 70 bytes, Stack size 0 bytes, sysctl.o(i.SysCtlPeripheralEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[21fa74c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
 </UL>
 
-<P><STRONG><a name="[220e5a4]"></a>UARTIntHandler</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, uart.o(i.UARTIntHandler))
+<P><STRONG><a name="[21fa260]"></a>UARTCharGetNonBlocking</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, uart.o(i.UARTCharGetNonBlocking))
+<BR><BR>[Called By]<UL><LI><a href="#[21fe5a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTIntHandler
+</UL>
+
+<P><STRONG><a name="[21fe5a4]"></a>UARTIntHandler</STRONG> (Thumb, 102 bytes, Stack size 24 bytes, uart.o(i.UARTIntHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UARTIntHandler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a440]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTCharGetNonBlocking
-<LI><a href="#[220a4f4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<BR>[Calls]<UL><LI><a href="#[21fa260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTCharGetNonBlocking
+<LI><a href="#[21fa314]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
-<P><STRONG><a name="[220a710]"></a>UARTSend</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, uart.o(i.UARTSend))
+<P><STRONG><a name="[21fa530]"></a>UARTSend</STRONG> (Thumb, 36 bytes, Stack size 24 bytes, uart.o(i.UARTSend))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UARTSend
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220a65c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[34548ac]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
-
-<P><STRONG><a name="[3454870]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
-
-<P><STRONG><a name="[3454834]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
-
-<P><STRONG><a name="[220a65c]"></a>main</STRONG> (Thumb, 294 bytes, Stack size 24 bytes, uart.o(i.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = main &rArr; GLCD_DISPLAY &rArr; GLCD_OUT_DATA
+<P><STRONG><a name="[21fa224]"></a>UARTStdioInit</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, uartstdio.o(i.UARTStdioInit))
+<BR><BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
-<BR>[Calls]<UL><LI><a href="#[220a4b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntMasterEnable
-<LI><a href="#[220a530]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
-<LI><a href="#[220a56c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
-<LI><a href="#[220a5e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinConfigure
-<LI><a href="#[220a620]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
-<LI><a href="#[220a710]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
-<LI><a href="#[220a788]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScanKeyMatrix
-<LI><a href="#[220a92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
-<LI><a href="#[220a968]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_FILL
-<LI><a href="#[220ab0c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
+
+<P><STRONG><a name="[21f8b68]"></a>UARTStdioInitExpClk</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, uartstdio.o(i.UARTStdioInitExpClk), UNUSED)
+
+<P><STRONG><a name="[21fa1e8]"></a>UARTprintf</STRONG> (Thumb, 428 bytes, Stack size 72 bytes, uartstdio.o(i.UARTprintf))
+<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = UARTprintf &rArr; UARTwrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[21f8ab4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
+</UL>
+<BR>[Called By]<UL><LI><a href="#[21fa47c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
+</UL>
+
+<P><STRONG><a name="[21f8ab4]"></a>UARTwrite</STRONG> (Thumb, 56 bytes, Stack size 24 bytes, uartstdio.o(i.UARTwrite))
+<BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UARTwrite
+</UL>
+<BR>[Called By]<UL><LI><a href="#[21fa1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+</UL>
+
+<P><STRONG><a name="[34bb268]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[34bb22c]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[34bb1f0]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+
+<P><STRONG><a name="[21fa47c]"></a>main</STRONG> (Thumb, 326 bytes, Stack size 32 bytes, uart.o(i.main))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = main &rArr; UARTprintf &rArr; UARTwrite
+</UL>
+<BR>[Calls]<UL><LI><a href="#[21fa1e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[21fa224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioInit
+<LI><a href="#[21fa2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntMasterEnable
+<LI><a href="#[21fa350]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[21fa38c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+<LI><a href="#[21fa404]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinConfigure
+<LI><a href="#[21fa440]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<LI><a href="#[21fa530]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTSend
+<LI><a href="#[21fa5a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ScanKeyMatrix
+<LI><a href="#[21fa74c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_INIT
+<LI><a href="#[21fa788]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_FILL
+<LI><a href="#[21fa800]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DRW_REC_SOLID
+<LI><a href="#[21fa92c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GLCD_DISPLAY
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry7.o(.ARM.Collect$$$$00000007)
 </UL><P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[220e7fc]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
-<BR><BR>[Calls]<UL><LI><a href="#[220e7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
+<P><STRONG><a name="[21fe7fc]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[21fe7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220e7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
-</UL>
-<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
-</UL>
-<P><STRONG><a name="[220e7c0]"></a>FaultISR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
-<BR><BR>[Calls]<UL><LI><a href="#[220e7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
-</UL>
-<BR>[Called By]<UL><LI><a href="#[220e7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+<BR>[Called By]<UL><LI><a href="#[21fe7fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NmiSR
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL>
-<P><STRONG><a name="[220e784]"></a>IntDefaultHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
-<BR><BR>[Calls]<UL><LI><a href="#[220e784]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+<P><STRONG><a name="[21fe7c0]"></a>FaultISR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[21fe7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
 </UL>
-<BR>[Called By]<UL><LI><a href="#[220e784]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+<BR>[Called By]<UL><LI><a href="#[21fe7c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FaultISR
+</UL>
+<BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
+</UL>
+<P><STRONG><a name="[21fe784]"></a>IntDefaultHandler</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup.o(RESET))
+<BR><BR>[Calls]<UL><LI><a href="#[21fe784]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
+</UL>
+<BR>[Called By]<UL><LI><a href="#[21fe784]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntDefaultHandler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup.o(RESET)
 </UL><P>
