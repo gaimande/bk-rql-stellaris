@@ -4,17 +4,18 @@
 ### List of Objects: adding '".\output\startup.o"'
 ### List of Objects: adding '".\output\uart.o"'
 ### List of Objects: adding '".\output\uartstdio.o"'
+### List of Objects: adding '".\output\image.o"'
 ### List of Objects: adding '"C:\StellarisWare\driverlib\rvmdk-cm3\driverlib-cm3.lib"'
 ### List of Objects: adding '"C:\StellarisWare\grlib\rvmdk-cm3\grlib-cm3.lib"'
 ### ADS-LD Command completed:
---cpu Cortex-M3 ".\output\startup.o" ".\output\uart.o" ".\output\uartstdio.o" "C:\StellarisWare\driverlib\rvmdk-cm3\driverlib-cm3.lib" "C:\StellarisWare\grlib\rvmdk-cm3\grlib-cm3.lib" --library_type=microlib --strict --scatter "UART.sct" 
+--cpu Cortex-M3 ".\output\startup.o" ".\output\uart.o" ".\output\uartstdio.o" ".\output\image.o" "C:\StellarisWare\driverlib\rvmdk-cm3\driverlib-cm3.lib" "C:\StellarisWare\grlib\rvmdk-cm3\grlib-cm3.lib" --library_type=microlib --strict --scatter "UART.sct" 
 --entry Reset_Handler --autoat --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
 --info sizes --info totals --info unused --info veneers 
  --list ".\UART.map" -o ".\output\UART.axf"### Preparing Environment (PrepEnvAds)
 ### ADS-LD Output File: '.\output\UART.axf'
 ### ADS-LD Command File: '.\output\UART.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\output\UART.lnp', Handle=0x00000628
+### Creating CmdFile '.\output\UART.lnp', Handle=0x000002B4
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\output\UART.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
