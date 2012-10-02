@@ -15,7 +15,7 @@
 ### ADS-LD Output File: '.\output\UART.axf'
 ### ADS-LD Command File: '.\output\UART.lnp'
 ### Checking for dirty Components...
-### Creating CmdFile '.\output\UART.lnp', Handle=0x000002B4
+### Creating CmdFile '.\output\UART.lnp', Handle=0x00000378
 ### Writing '.lnp' file
 ### ADS-LD Command file '.\output\UART.lnp' is ready.
 ### ADS-LD: About to start ADS-LD Thread.
