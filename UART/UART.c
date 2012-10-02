@@ -42,6 +42,10 @@
 //Global Variable
 extern unsigned char Welcome01[1024];
 extern unsigned char Welcome02[1024];
+extern unsigned char menu_status[1024];
+extern unsigned char menu_setup[1024];
+extern unsigned char menu_history[1024];
+extern unsigned char menu_factory[1024];
 const char keyPadMatrix[] = 
 { 
     '1','2','3','U',
@@ -297,21 +301,24 @@ main(void)
     // Initialize the display driver.
     //
     GLCD_INIT();
-	//GLCD_FILL(0);
 	GLCD_IMAGE(Welcome01);
-    //GLCD_DRW_REC_SOLID(45,45,20,20,1);
-	//GLCD_CHAR_SET(0, 0, basic_font, 'A');
-	//GLCD_OUT_STR(40,1,"Minh THu MT",1);
-	//GLCD_DRW_LINE(2,2,8,8,1);
-	//GLCD_OUT_DEC(60, 0 ,1234 ,4, 1);
     GLCD_DISPLAY();
-	//delay_ms(1000);
-	//		for(ulLoop = 0; ulLoop < 1000000; ulLoop++)
-    //    {
-    //    }
 	SysCtlDelay(5000000);	
 	GLCD_IMAGE(Welcome02);
 	GLCD_DISPLAY();
+	SysCtlDelay(5000000);
+	GLCD_IMAGE(menu_status);
+    GLCD_DISPLAY();
+	SysCtlDelay(5000000);
+	GLCD_IMAGE(menu_setup);
+    GLCD_DISPLAY();
+	SysCtlDelay(5000000);
+	GLCD_IMAGE(menu_history);
+    GLCD_DISPLAY();
+	SysCtlDelay(5000000);
+	GLCD_IMAGE(menu_factory);
+    GLCD_DISPLAY();
+	
 	//Send notification
 	UARTSend((unsigned char *)"Automated Dialyzer and Bloodline Washing System", 47);
 
