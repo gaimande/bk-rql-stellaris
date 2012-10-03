@@ -54,6 +54,7 @@ unsigned int t_e_nps = 60;
 char array_index;
 char buff_data=255;
 char buff_array[4]={0,0,0,0};
+char ack_set=0;
 
 
 extern unsigned char Welcome01[1024];
@@ -73,6 +74,9 @@ extern unsigned char setup_reverse[1024];
 extern unsigned char noti_save_yes[1024];
 extern unsigned char noti_save_no[1024];
 extern unsigned char noti_send_wait[1024];
+extern unsigned char noti_sent_ok[1024];
+extern unsigned char noti_sent_fail[1024];
+extern unsigned char status_menu[1024];
 
 #define SAVE_NOTI_NO 	0
 #define SAVE_NOTI_YES 	1
@@ -327,8 +331,11 @@ UARTIntHandler(void)
 				//Turn off pump for waiting Hemoclean
 				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);		
 				break;
+			case 'A':
+				ack_set = 1;
+				break;
 		}
-		ROM_UARTCharPutNonBlocking(UART1_BASE,UARTCharGetNonBlocking(UART0_BASE));
+		ROM_UARTCharPut(UART1_BASE,UARTCharGetNonBlocking(UART0_BASE));
     }
 }
 
@@ -821,6 +828,77 @@ main(void)
 				break;
 			case 3:
 				GLCD_IMAGE(noti_send_wait);
+				GLCD_DISPLAY();
+				//UARTprintf("\nCho nhan ki tu tu Slave");
+				//while(1);
+				
+				
+				UARTprintf("\nBat dau gui dia chi Slave");
+				UARTCharPut(UART0_BASE,1);
+				UARTCharPut(UART0_BASE,1);
+				UARTprintf("\nCho phan hoi");
+				
+				while(ack_set!=1);
+				ack_set = 0;
+				UARTprintf("\nBat dau gui du lieu....");
+				UARTCharPut(UART0_BASE,t_fwd);
+				UARTprintf("\nt_fwd =  %d",t_fwd);
+				SysCtlDelay(5000000);
+				
+				UARTprintf("\nt_rsv =  %d",t_rsv);
+				UARTCharPut(UART0_BASE,t_rsv);
+				SysCtlDelay(5000000);
+				
+				UARTCharPut(UART0_BASE,t_nps);
+				UARTprintf("\nt_nps =  %d",t_nps);
+				SysCtlDelay(5000000);
+				
+				UARTCharPut(UART0_BASE,t_psv);
+				UARTprintf("\nt_psv =  %d",t_psv);
+				SysCtlDelay(5000000);
+				
+				UARTCharPut(UART0_BASE,t_e_fwd);
+				UARTprintf("\nt_e_fwd =  %d",t_e_fwd);
+				SysCtlDelay(5000000);
+				
+				UARTCharPut(UART0_BASE,t_e_rsv);
+				UARTprintf("\nt_e_rsv =  %d",t_e_rsv);
+				SysCtlDelay(5000000);
+				
+				UARTCharPut(UART0_BASE,t_e_nps);
+				UARTprintf("\nt_e_nps =  %d",t_e_nps);
+				SysCtlDelay(5000000);
+				
+				UARTCharPut(UART0_BASE,'E');
+				UARTprintf("\nEnd of Sequence!");
+				SysCtlDelay(5000000);
+				/*
+				UARTprintf("\nt_fwd =  %d",t_fwd);
+				SysCtlDelay(20000);
+				UARTprintf("\nt_rsv =  %d",t_rsv);
+				SysCtlDelay(20000);
+				UARTprintf("\nt_nps =  %d",t_nps);
+				SysCtlDelay(20000);
+				UARTprintf("\nt_psv =  %d",t_psv);
+				SysCtlDelay(20000);
+				UARTprintf("\nt_e_fwd =  %d",t_e_fwd);
+				SysCtlDelay(20000);
+				UARTprintf("\nt_e_rsv =  %d",t_e_rsv);
+				SysCtlDelay(20000);
+				UARTprintf("\nt_e_nps =  %d",t_e_nps);
+				*/
+				UARTprintf("\nCho phan hoi");
+				SysCtlDelay(200000);	
+				GLCD_IMAGE(noti_sent_ok);
+				while(ack_set!=1)
+				{					
+					ack_set = 0;
+				}
+				UARTprintf("\nPhan hoi thanh cong");
+				//else
+				//{
+				//	GLCD_IMAGE(noti_sent_fail);
+				//}
 				GLCD_DISPLAY();
 				SysCtlDelay(5000000);	
 				setup_index = 8;
