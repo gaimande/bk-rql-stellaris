@@ -70,7 +70,13 @@ extern unsigned char setup_save[1024];
 extern unsigned char setup_preservation[1024];
 extern unsigned char setup_pressure[1024];
 extern unsigned char setup_reverse[1024];
+extern unsigned char noti_save_yes[1024];
+extern unsigned char noti_save_no[1024];
+extern unsigned char noti_send_wait[1024];
 
+#define SAVE_NOTI_NO 	0
+#define SAVE_NOTI_YES 	1
+#define SEND_WAIT	 	2
 
 void clear_data(void)
 {
@@ -358,7 +364,7 @@ main(void)
 	char key_return;
 	int row = 2;
 	unsigned long ADC_DATA;
-	char menu_index,setup_index,ok_set,clear_set;
+	char menu_index,setup_index,noti_index,ok_set,clear_set;
     //
 	// Set the clocking to run directly from the internal crystal/oscillator.
 	//
@@ -429,7 +435,7 @@ main(void)
     // Initialize the display driver.
     //
     GLCD_INIT();
-
+	/*
 	GLCD_IMAGE(Welcome01);
     GLCD_DISPLAY();
 	SysCtlDelay(5000000);	
@@ -438,6 +444,8 @@ main(void)
 	SysCtlDelay(5000000);
 	GLCD_IMAGE(menu_status);
     GLCD_DISPLAY();
+	*/
+	
 	/*
 	SysCtlDelay(5000000);
 	GLCD_IMAGE(menu_setup);
@@ -725,6 +733,12 @@ main(void)
 				}
 				break;
 			case 8:	
+				if(ok_set)
+				{
+					//noti_index = SAVE_NOTI_YES;
+					noti_index = 1;
+					goto notification_menu;
+				}
 				GLCD_IMAGE(setup_save);
 				break;
 		}
@@ -761,6 +775,60 @@ main(void)
 			GLCD_OUT_DEC(110,35,t_e_nps%60,2,1);
 		}
 		
+		GLCD_DISPLAY();
+	}
+	
+	notification_menu:
+	while(1)
+	{
+		ok_set = 0;
+
+		switch(ScanKeyMatrix())
+		{
+			case 'U':
+				if(noti_index > 1)
+				{
+					noti_index --;
+				}	
+				break;
+			case 'D':
+				if(noti_index < 2)
+				{		
+					noti_index ++;
+				}	
+				break;				
+			case '@':
+				ok_set = 1;
+				break;	
+		}
+		
+		switch(noti_index)
+		{
+			case 1:				
+				if(ok_set)
+				{
+					noti_index = 3;
+				}
+				GLCD_IMAGE(noti_save_yes);
+				break;
+			case 2:
+				if(ok_set)
+				{
+					setup_index = 8;
+					goto setup_menu;
+				}
+				GLCD_IMAGE(noti_save_no);
+				break;
+			case 3:
+				GLCD_IMAGE(noti_send_wait);
+				GLCD_DISPLAY();
+				SysCtlDelay(5000000);	
+				setup_index = 8;
+				goto setup_menu;
+			default:
+				break;
+		}
+
 		GLCD_DISPLAY();
 	}
 	
