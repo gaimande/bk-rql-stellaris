@@ -38,6 +38,8 @@
 #include "glcd.h"
 #include "utils/uartstdio.h"
 #include "driverlib/adc.h"
+#include "inc/hw_i2c.h"
+#include "driverlib/i2c.h"
 
 //Global Variable
 extern unsigned char Welcome01[1024];
@@ -50,16 +52,16 @@ extern unsigned char setup_forward[1024];
 extern unsigned char setup_elchem_frd[1024];
 extern unsigned char setup_elchem_rsv[1024];
 extern unsigned char setup_elchem_pressure[1024];
-extern unsigned char setup_exit[1024];
+extern unsigned char setup_save[1024];
 extern unsigned char setup_preservation[1024];
 extern unsigned char setup_pressure[1024];
 extern unsigned char setup_reverse[1024];
 const char keyPadMatrix[] = 
 { 
-    '1','2','3','U',
-    '4','5','6','D',
-    '7','8','9','<',
-    'T','0','C','@',
+    'U','3','2','1',
+    'D','6','5','4',
+    '<','9','8','7',
+    '@','C','0','T',
     0xFF
 };
 
@@ -83,16 +85,32 @@ char ScanKeyMatrix()
         // read colums - break when key press detected
 		
         if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_0 ) )
-            break;
+		{
+			SysCtlDelay(200000);
+			if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_0 ) )
+				break;
+		}		
         key++;
         if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_1 ) )
-            break;
+        {
+			SysCtlDelay(200000);
+			if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_1 ) )
+				break;
+		}
         key++;
         if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_2 ) )
-            break;
+        {
+			SysCtlDelay(200000);
+			if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_2 ) )
+				break;
+		}
         key++;
 		if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_3 ) )
-            break;
+        {
+			SysCtlDelay(200000);
+			if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_3 ) )
+				break;
+		}
         key++;
     }
 	
@@ -100,6 +118,68 @@ char ScanKeyMatrix()
         
     return keyPadMatrix[key]; 
 }
+
+//*****************************************************************************
+//
+// Set the address for slave module. This is a 7-bit address sent in the
+// following format:
+//                      [A6:A5:A4:A3:A2:A1:A0:RS]
+//
+// A zero in the R/S position of the first byte means that the master
+// transmits (sends) data to the selected slave, and a one in this position
+// means that the master receives data from the slave.
+//
+//*****************************************************************************
+#define SLAVE_ADDRESS 0x3C
+
+#define WRITE_BYTE (false) //*< instruct slave I2C device that the master is doing a write operation
+#define READ_BYTE (false) //*< instruct slave I2C device that the master is doing a read operation
+
+//*****************************************************************************
+//
+// Global variable to hold the I2C data that has been received.
+//
+//*****************************************************************************
+static volatile unsigned long g_ulMasterData;
+
+void InitI2C(void)
+{
+  //
+  // Enable I2C0 in PORTB[2:3]
+  //
+  SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+
+  //
+  // The I2C0 peripheral must be enabled before use.
+  //
+  SysCtlPeripheralEnable(SYSCTL_PERIPH_I2C0);
+
+  //
+  // Configure the pin muxing for I2C0 functions on port B2 and B3.
+  // This step is not necessary if your part does not support pin muxing.
+  //
+  GPIOPinConfigure(GPIO_PB2_I2C0SCL);
+  GPIOPinConfigure(GPIO_PB3_I2C0SDA);
+
+  //
+  // Select the I2C function for these pins.  This function will also
+  // configure the GPIO pins pins for I2C operation, setting them to
+  // open-drain operation with weak pull-ups.  Consult the data sheet
+  // to see which functions are allocated per pin.
+  //
+  GPIOPinTypeI2C(GPIO_PORTB_BASE, GPIO_PIN_2 | GPIO_PIN_3);
+
+
+  // Set GPIO Pins for Open-Drain operation (I have two Rpulls=10K Ohm to 5V on the SCL and SDA lines)
+  GPIOPadConfigSet(GPIO_PORTB_BASE, GPIO_PIN_3, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_OD);
+  GPIOPadConfigSet(GPIO_PORTB_BASE, GPIO_PIN_2, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_OD);
+
+  // Give control to the I2C0 Module
+  GPIODirModeSet(GPIO_PORTB_BASE, GPIO_PIN_3, GPIO_DIR_MODE_HW);
+  GPIODirModeSet(GPIO_PORTB_BASE, GPIO_PIN_2, GPIO_DIR_MODE_HW);
+}
+
+
 
 //*****************************************************************************
 //
@@ -370,12 +450,43 @@ main(void)
 			ROM_UARTCharPutNonBlocking(UART1_BASE,key_return);
 	}	
 	*/	
+	/*
+	InitI2C();
+	
+	// configure and turn on the I2C0 master interrupt.  The I2CMasterIntEnableEx()
+	// gives you the ability to only enable specific interrupts.
+	I2CMasterIntEnableEx(I2C0_MASTER_BASE,I2C_MASTER_INT_DATA|I2C_MASTER_INT_TIMEOUT);
+	
+	//
+	// Enable and initialize the I2C0 master module.  Use the system clock for
+	// the I2C0 module.  The last parameter sets the I2C data transfer rate.
+	// If false the data rate is set to 100kbps and if true the data rate will
+	// be set to 400kbps.  For this example we will use a data rate of 100kbps.
+	//
+	I2CMasterInitExpClk(I2C0_MASTER_BASE, SysCtlClockGet(), false);
+	
+	while(1)
+	{
+		//
+      // Tell the master module what address it will place on the bus when
+      // communicating with the slave.  Set the address to SLAVE_ADDRESS
+      // (as set in the slave module).  The receive parameter is set to false
+      // which indicates the I2C Master is initiating a writes to the slave.  If
+      // true, that would indicate that the I2C Master is initiating reads from
+      // the slave.
+      //
+      I2CMasterSlaveAddrSet(I2C0_MASTER_BASE, SLAVE_ADDRESS, false);
+	}
+	*/
+	
+	
 	menu_index = 1;
 	ok_set = 0;
 	
 	main_menu:
 	while(1)
 	{
+		ok_set = 0;
 		switch(ScanKeyMatrix())
 		{
 			case 'U':
@@ -399,6 +510,8 @@ main(void)
 			case '@':
 				ok_set = 1;
 				break;
+			default:
+				break;
 		}
 		switch(menu_index)
 		{
@@ -409,9 +522,6 @@ main(void)
 			case 2:	
 				if(ok_set)
 				{
-					GLCD_IMAGE(setup_forward);
-					GLCD_DISPLAY();
-					ok_set = 0;
 					setup_index = 1;
 					goto setup_menu;
 				}				
@@ -433,6 +543,7 @@ main(void)
 	setup_menu:
 	while(1)
 	{
+		ok_set = 0;
 		switch(ScanKeyMatrix())
 		{
 			case 'U':
@@ -450,6 +561,11 @@ main(void)
 			case '@':
 				ok_set = 1;
 				break;
+			case '<':
+				menu_index = 2;
+				goto main_menu;	
+			default:
+				break;	
 		}
 		switch(setup_index)
 		{
@@ -482,14 +598,7 @@ main(void)
 				GLCD_DISPLAY();
 				break;
 			case 8:	
-				if(ok_set)
-				{
-					menu_index = 2;
-					setup_index = 0;
-					ok_set = 0;
-					goto main_menu;	
-				}	
-				GLCD_IMAGE(setup_exit);
+				GLCD_IMAGE(setup_save);
 				GLCD_DISPLAY();
 				break;
 		}

@@ -17,3 +17,5 @@
 .\output\uart.o: C:\Keil\ARM\RV31\INC\math.h
 .\output\uart.o: C:\StellarisWare\utils/uartstdio.h
 .\output\uart.o: C:\StellarisWare\driverlib/adc.h
+.\output\uart.o: C:\StellarisWare\inc/hw_i2c.h
+.\output\uart.o: C:\StellarisWare\driverlib/i2c.h
