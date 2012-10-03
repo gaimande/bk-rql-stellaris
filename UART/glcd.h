@@ -569,9 +569,8 @@ unsigned int GLCD_CHAR_SET(unsigned char glcd_x, unsigned char glcd_y, const cha
 		glcd_font = glcd_font + (num-32)*5;
 		
 		for(i=0;i<5;i++)
-		{
-			//c = pgm_read_byte (glcd_font);
-			c = (unsigned char)glcd_font;
+		{			
+			c = *(glcd_font);
 			glcd_buff[add] |= (c << glcd_y);
 			glcd_buff[add + 128] |= (c >> (8 - glcd_y));
 			add++;
