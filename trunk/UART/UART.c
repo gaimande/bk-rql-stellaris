@@ -390,6 +390,11 @@ main(void)
     // Initialize the display driver.
     //
     GLCD_INIT();
+	GLCD_FILL(0);
+	GLCD_OUT_STR(0,0,"leu leu be Thu",1);
+	GLCD_OUT_DEC(60, 0 ,3 ,1, 1);
+	GLCD_DISPLAY();
+	while(1);
 	GLCD_IMAGE(Welcome01);
     GLCD_DISPLAY();
 	SysCtlDelay(5000000);	
