@@ -42,6 +42,16 @@
 #include "driverlib/i2c.h"
 
 //Global Variable
+//Time data variables
+unsigned int t_fwd = 90;
+unsigned int t_rsv = 60;
+unsigned int t_nps = 60;
+unsigned int t_psv = 30;
+unsigned int t_e_fwd = 60;
+unsigned int t_e_rsv = 60;
+unsigned int t_e_nps = 60;
+
+
 extern unsigned char Welcome01[1024];
 extern unsigned char Welcome02[1024];
 extern unsigned char menu_status[1024];
@@ -390,11 +400,7 @@ main(void)
     // Initialize the display driver.
     //
     GLCD_INIT();
-	GLCD_FILL(0);
-	GLCD_OUT_STR(0,0,"leu leu be Thu",1);
-	GLCD_OUT_DEC(60, 0 ,3 ,1, 1);
-	GLCD_DISPLAY();
-	while(1);
+
 	GLCD_IMAGE(Welcome01);
     GLCD_DISPLAY();
 	SysCtlDelay(5000000);	
@@ -575,39 +581,64 @@ main(void)
 		switch(setup_index)
 		{
 			case 1:				
-				GLCD_IMAGE(setup_forward);
-				GLCD_DISPLAY();
+				GLCD_IMAGE(setup_forward);				
 				break;
 			case 2:				
-				GLCD_IMAGE(setup_reverse);
-				GLCD_DISPLAY();
+				GLCD_IMAGE(setup_reverse);	
 				break;
 			case 3:	
-				GLCD_IMAGE(setup_pressure);
-				GLCD_DISPLAY();
+				GLCD_IMAGE(setup_pressure);	
 				break;	
 			case 4:	
 				GLCD_IMAGE(setup_preservation);
-				GLCD_DISPLAY();
 				break;		
 			case 5:	
 				GLCD_IMAGE(setup_elchem_frd);
-				GLCD_DISPLAY();
 				break;
 			case 6:	
 				GLCD_IMAGE(setup_elchem_rsv);
-				GLCD_DISPLAY();
 				break;
 			case 7:	
 				GLCD_IMAGE(setup_elchem_pressure);
-				GLCD_DISPLAY();
 				break;
 			case 8:	
 				GLCD_IMAGE(setup_save);
-				GLCD_DISPLAY();
 				break;
 		}
+		if(setup_index <5)
+		{
+			GLCD_OUT_DEC(95,13,t_fwd/60,2,1);
+			GLCD_OUT_STR(105,13,":",1);
+			GLCD_OUT_DEC(110,13,t_fwd%60,2,1);
+			
+			GLCD_OUT_DEC(95,24,t_rsv/60,2,1);
+			GLCD_OUT_STR(105,24,":",1);
+			GLCD_OUT_DEC(110,24,t_rsv%60,2,1);
+			
+			GLCD_OUT_DEC(95,35,t_nps/60,2,1);
+			GLCD_OUT_STR(105,35,":",1);
+			GLCD_OUT_DEC(110,35,t_nps%60,2,1);
+			
+			GLCD_OUT_DEC(95,46,t_psv/60,2,1);
+			GLCD_OUT_STR(105,46,":",1);
+			GLCD_OUT_DEC(110,46,t_psv%60,2,1);
+		}
+		else
+		{
+			GLCD_OUT_DEC(95,13,t_e_fwd/60,2,1);
+			GLCD_OUT_STR(105,13,":",1);
+			GLCD_OUT_DEC(110,13,t_e_fwd%60,2,1);
+			
+			GLCD_OUT_DEC(95,24,t_e_rsv/60,2,1);
+			GLCD_OUT_STR(105,24,":",1);
+			GLCD_OUT_DEC(110,24,t_e_rsv%60,2,1);
+			
+			GLCD_OUT_DEC(95,35,t_e_nps/60,2,1);
+			GLCD_OUT_STR(105,35,":",1);
+			GLCD_OUT_DEC(110,35,t_e_nps%60,2,1);
+		}
 		
+		GLCD_DISPLAY();
 	}
 	
 	
