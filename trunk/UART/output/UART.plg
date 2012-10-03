@@ -3586,3 +3586,922 @@ Program Size: Code=2844 RO-data=1152 RW-data=14360 ZI-data=1280
 FromELF: creating hex file...
 User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
 ".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(255): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(401): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(410): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(466): warning:  #111-D: statement is unreachable
+UART.c:         menu_index = 1;
+UART.c:         ^
+UART.c(595): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(604): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(303): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(304): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(305): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 20 warnings, 0 errors
+linking...
+Program Size: Code=3184 RO-data=660 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 20 Warning(s).
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(255): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(401): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(410): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(466): warning:  #111-D: statement is unreachable
+UART.c:         menu_index = 1;
+UART.c:         ^
+UART.c(595): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(604): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(303): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(304): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(305): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 20 warnings, 0 errors
+UART.c - 0 Error(s), 20 Warning(s).
+Build target 'UART'
+linking...
+Program Size: Code=3184 RO-data=660 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 0 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(255): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(401): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(410): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(596): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(605): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(303): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(304): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(305): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=2844 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(612): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(621): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=2912 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(614): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(623): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=2920 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(614): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(623): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=2916 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(614): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(623): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=2912 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(611): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(620): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=2904 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(609): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(618): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=2900 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(515): error:  #65: expected a ";"
+UART.c:                 }
+UART.c:                 ^
+UART.c(566): error:  #65: expected a ";"
+UART.c:                 }
+UART.c:                 ^
+UART.c(613): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(622): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 2 errors
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(566): error:  #65: expected a ";"
+UART.c:                 }
+UART.c:                 ^
+UART.c(613): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(622): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 1 error
+Target not created
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(613): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(622): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=2904 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(616): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(625): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+linking...
+Program Size: Code=2912 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
+Build target 'UART'
+compiling UART.c...
+C:\StellarisWare\inc/hw_gpio.h(116): warning:  #47-D: incompatible redefinition of macro "GPIO_LOCK_KEY" (declared at line 1845 of "C:\StellarisWare\inc/lm3s9790.h")
+C:\StellarisWare\inc/hw_gpio.h:   #define GPIO_LOCK_KEY           0x1ACCE551  // Unlocks the GPIO_CR register
+C:\StellarisWare\inc/hw_gpio.h:           ^
+glcd.h(155): warning:  #1295-D: Deprecated declaration GLCD_INIT - give arg types
+glcd.h:   void GLCD_INIT();
+glcd.h:        ^
+glcd.h(156): warning:  #1295-D: Deprecated declaration GLCD_WAIT - give arg types
+glcd.h:   void GLCD_WAIT();
+glcd.h:        ^
+glcd.h(161): warning:  #1295-D: Deprecated declaration GLCD_CS1_ENABLE - give arg types
+glcd.h:   void GLCD_CS1_ENABLE();
+glcd.h:        ^
+glcd.h(162): warning:  #1295-D: Deprecated declaration GLCD_CS2_ENABLE - give arg types
+glcd.h:   void GLCD_CS2_ENABLE();
+glcd.h:        ^
+glcd.h(163): warning:  #1295-D: Deprecated declaration GLCD_DISPLAY - give arg types
+glcd.h:   void GLCD_DISPLAY();
+glcd.h:        ^
+glcd.h(270): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(284): warning:  #69-D: integer conversion resulted in truncation
+glcd.h:         GPIOPinWrite(EN_PORT,EN_PIN,~EN_PIN);
+glcd.h:                                     ^
+glcd.h(574): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned char)glcd_font;
+glcd.h:                             ^
+glcd.h(600): warning:  #767-D: conversion from pointer to smaller integer
+glcd.h:                         c = (unsigned short int)glcd_font;
+glcd.h:                             ^
+glcd.h(673): warning:  #1-D: last line of file ends without a newline
+glcd.h:   }
+glcd.h:    ^
+UART.c(271): warning:  #69-D: integer conversion resulted in truncation
+UART.c:                                 GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+UART.c:                                                                         ^
+UART.c(417): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(426): warning:  #9-D: nested comment is not allowed
+UART.c:         /*
+UART.c:         ^
+UART.c(611): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(620): warning:  #128-D: loop is not reachable from preceding code
+UART.c:         while(1)
+UART.c:         ^
+UART.c(319): warning:  #177-D: variable "key_return" was declared but never referenced
+UART.c:         char key_return;
+UART.c:              ^
+UART.c(320): warning:  #177-D: variable "row" was declared but never referenced
+UART.c:         int row = 2;
+UART.c:             ^
+UART.c(321): warning:  #177-D: variable "ADC_DATA" was declared but never referenced
+UART.c:         unsigned long ADC_DATA;
+UART.c:                       ^
+UART.c: UART.c: 19 warnings, 0 errors
+compiling image.c...
+linking...
+Program Size: Code=2904 RO-data=1152 RW-data=14364 ZI-data=1284  
+FromELF: creating hex file...
+User command #1: fromelf --bin --output .\output\UART.bin .\output\UART.axf
+".\output\UART.axf" - 0 Error(s), 19 Warning(s).
