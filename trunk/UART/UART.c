@@ -51,6 +51,10 @@ unsigned int t_e_fwd = 60;
 unsigned int t_e_rsv = 60;
 unsigned int t_e_nps = 60;
 
+char array_index;
+char buff_data=255;
+char buff_array[4]={0,0,0,0};
+
 
 extern unsigned char Welcome01[1024];
 extern unsigned char Welcome02[1024];
@@ -66,6 +70,31 @@ extern unsigned char setup_save[1024];
 extern unsigned char setup_preservation[1024];
 extern unsigned char setup_pressure[1024];
 extern unsigned char setup_reverse[1024];
+
+
+void clear_data(void)
+{
+	array_index = 0;
+	buff_array[0] = 0;
+	buff_array[1] = 0;
+	buff_array[2] = 0;
+	buff_array[3] = 0;
+}
+
+unsigned int enter_num()
+{
+	buff_array[array_index]=buff_data;
+	buff_data = 255;
+	if(array_index > 3)
+	{
+		clear_data();
+	}
+	else
+		array_index ++;
+	return( buff_array[0]*600 + buff_array[1]*60 + 
+			buff_array[2]*10 + buff_array[3] );
+}
+
 const char keyPadMatrix[] = 
 { 
     'U','3','2','1',
@@ -96,28 +125,28 @@ char ScanKeyMatrix()
 		
         if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_0 ) )
 		{
-			SysCtlDelay(200000);
+			SysCtlDelay(400000);
 			if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_0 ) )
 				break;
 		}		
         key++;
         if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_1 ) )
         {
-			SysCtlDelay(200000);
+			SysCtlDelay(400000);
 			if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_1 ) )
 				break;
 		}
         key++;
         if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_2 ) )
         {
-			SysCtlDelay(200000);
+			SysCtlDelay(400000);
 			if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_2 ) )
 				break;
 		}
         key++;
 		if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_3 ) )
         {
-			SysCtlDelay(200000);
+			SysCtlDelay(400000);
 			if( GPIOPinRead( GPIO_PORTE_BASE, GPIO_PIN_3 ) )
 				break;
 		}
@@ -329,7 +358,7 @@ main(void)
 	char key_return;
 	int row = 2;
 	unsigned long ADC_DATA;
-	char menu_index,setup_index,ok_set;
+	char menu_index,setup_index,ok_set,clear_set;
     //
 	// Set the clocking to run directly from the internal crystal/oscillator.
 	//
@@ -555,6 +584,7 @@ main(void)
 	while(1)
 	{
 		ok_set = 0;
+		clear_set = 0;
 		switch(ScanKeyMatrix())
 		{
 			case 'U':
@@ -562,44 +592,137 @@ main(void)
 					break;
 				else
 				setup_index--;
+				clear_data();
 				break;
 			case 'D':	
 				if(setup_index==8)
 					break;
 				else
 				setup_index++;
+				clear_data();
 				break;
 			case '@':
 				ok_set = 1;
 				break;
 			case '<':
 				menu_index = 2;
+				clear_data();
 				goto main_menu;	
+			case '0':
+				buff_data = 0;
+				break;
+			case '1':
+				buff_data = 1;
+				break;
+			case '2':
+				buff_data = 2;
+				break;
+			case '3':
+				buff_data = 3;
+				break;
+			case '4':
+				buff_data = 4;
+				break;
+			case '5':
+				buff_data = 5;
+				break;
+			case '6':
+				buff_data = 6;
+				break;
+			case '7':
+				buff_data = 7;
+				break;
+			case '8':
+				buff_data = 8;
+				break;
+			case '9':
+				buff_data = 9;
+				break;			
+			case 'C':
+				clear_data();
+				clear_set = 1;
+				break;
 			default:
 				break;	
 		}
 		switch(setup_index)
 		{
 			case 1:				
-				GLCD_IMAGE(setup_forward);				
+				GLCD_IMAGE(setup_forward);		
+				if(buff_data!=255)
+				{
+					t_fwd = enter_num();				
+				}
+				else if(clear_set==1)
+				{
+					t_fwd = 0;
+				}
 				break;
 			case 2:				
 				GLCD_IMAGE(setup_reverse);	
+				if(buff_data!=255)
+				{
+					t_rsv = enter_num();				
+				}	
+				else if(clear_set==1)
+				{
+					t_rsv = 0;
+				}
 				break;
 			case 3:	
 				GLCD_IMAGE(setup_pressure);	
+				if(buff_data!=255)
+				{
+					t_nps = enter_num();				
+				}
+				else if(clear_set==1)
+				{
+					t_nps = 0;
+				}
 				break;	
 			case 4:	
 				GLCD_IMAGE(setup_preservation);
+				if(buff_data!=255)
+				{
+					t_psv = enter_num();				
+				}
+				else if(clear_set==1)
+				{
+					t_psv = 0;
+				}
 				break;		
 			case 5:	
 				GLCD_IMAGE(setup_elchem_frd);
+				if(buff_data!=255)
+				{
+					t_e_fwd = enter_num();				
+				}
+				else if(clear_set==1)
+				{
+					t_e_fwd = 0;
+				}
 				break;
 			case 6:	
 				GLCD_IMAGE(setup_elchem_rsv);
+				if(buff_data!=255)
+				{
+					t_e_rsv = enter_num();				
+				}
+				else if(clear_set==1)
+				{
+					t_e_rsv = 0;
+				}
 				break;
 			case 7:	
 				GLCD_IMAGE(setup_elchem_pressure);
+				if(buff_data!=255)
+				{
+					t_e_nps = enter_num();				
+				}
+				else if(clear_set==1)
+				{
+					t_e_nps = 0;
+				}
 				break;
 			case 8:	
 				GLCD_IMAGE(setup_save);
