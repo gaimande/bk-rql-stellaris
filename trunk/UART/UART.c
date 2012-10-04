@@ -243,6 +243,7 @@ void InitI2C(void)
 //*****************************************************************************
 
 char i,j;
+char slave_run=0;
 //*****************************************************************************
 //
 // The error routine that is called if the driver library encounters an error.
@@ -318,18 +319,24 @@ UARTIntHandler(void)
 			case 'P':
 				//Start pump
 				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,~GPIO_PIN_7);
+				GPIOPinWrite(GPIO_PORTD_BASE,GPIO_PIN_1,GPIO_PIN_1);
+				slave_run = 1;
 				break;
 			case 'F':
 				//Turn off pump
 				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);	
+				slave_run = 0;
+				GPIOPinWrite(GPIO_PORTD_BASE,GPIO_PIN_1,~GPIO_PIN_1);
 				break;
 			case 'H':
 				//Turn off pump for fill Hemoclean from Mixing Module
 				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);	
+				slave_run = 0;
 				break;	
 			case 'S':
 				//Turn off pump for waiting Hemoclean
-				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);		
+				GPIOPinWrite(GPIO_PORTA_BASE,GPIO_PIN_7,GPIO_PIN_7);	
+				slave_run = 0;				
 				break;
 			case 'A':
 				ack_set = 1;
@@ -382,6 +389,10 @@ main(void)
 	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
 	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
 	GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE,GPIO_PIN_7);
+	GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE,GPIO_PIN_1);
+	
+	ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+	GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE,GPIO_PIN_5 | GPIO_PIN_5);
 	GPIOPinConfigure(GPIO_PA0_U0RX);
 	GPIOPinConfigure(GPIO_PA1_U0TX);
 	GPIOPinConfigure(GPIO_PD2_U1RX);
@@ -442,7 +453,7 @@ main(void)
     // Initialize the display driver.
     //
     GLCD_INIT();
-	/*
+	
 	GLCD_IMAGE(Welcome01);
     GLCD_DISPLAY();
 	SysCtlDelay(5000000);	
@@ -451,7 +462,7 @@ main(void)
 	SysCtlDelay(5000000);
 	GLCD_IMAGE(menu_status);
     GLCD_DISPLAY();
-	*/
+	
 	
 	/*
 	SysCtlDelay(5000000);
@@ -537,7 +548,10 @@ main(void)
 	
 	menu_index = 1;
 	ok_set = 0;
-	
+	//Mo bom
+	GPIOPinWrite(GPIO_PORTD_BASE,GPIO_PIN_1,GPIO_PIN_1);
+	GPIOPinWrite(GPIO_PORTB_BASE,GPIO_PIN_5,GPIO_PIN_5);
+	GPIOPinWrite(GPIO_PORTB_BASE,GPIO_PIN_7,GPIO_PIN_7);
 	main_menu:
 	while(1)
 	{
@@ -570,7 +584,11 @@ main(void)
 		}
 		switch(menu_index)
 		{
-			case 1:				
+			case 1:		
+				if(ok_set)
+				{
+					goto status_menu;
+				}	
 				GLCD_IMAGE(menu_status);
 				GLCD_DISPLAY();
 				break;
@@ -910,7 +928,95 @@ main(void)
 		GLCD_DISPLAY();
 	}
 	
-	
+	status_menu:
+	while(1)
+	{
+		GLCD_IMAGE(status_menu);
+		GLCD_OUT_STR(62,15,"Temp :25 C",1);
+		GLCD_OUT_STR(62,25,"Condt:5 uS.",1);
+		GLCD_OUT_STR(62,35,"Chem :0 L",1);
+		while(1)
+		{
+			GLCD_DRW_REC_SOLID(11,26,14,55,1);
+			GLCD_DRW_REC_SOLID(14,34,45,37,1);
+			GLCD_DRW_REC_SOLID(14,52,45,55,1);
+			GLCD_DISPLAY();
+			if(ScanKeyMatrix()=='<')
+			{
+				menu_index = 1;
+				goto main_menu;
+			}
+			//SysCtlDelay(5000000);	//delay 40ms
+			for(ulLoop = 0; ulLoop < 1000000; ulLoop++)
+			{
+				if(ulLoop == 23000)
+				{
+					GLCD_IMAGE(status_menu);
+					GLCD_OUT_STR(62,15,"Temp :26 C",1);
+					GLCD_OUT_STR(62,25,"Condt:6 uS.",1);
+					GLCD_OUT_STR(62,35,"Chem :0 L",1);
+					GLCD_DISPLAY();					
+				}
+				if(ulLoop == 800000)
+				{
+					GLCD_IMAGE(status_menu);
+					GLCD_OUT_STR(62,15,"Temp :25 C",1);
+					GLCD_OUT_STR(62,25,"Condt:6 uS.",1);
+					GLCD_OUT_STR(62,35,"Chem :0 L",1);
+					GLCD_DISPLAY();					
+				}
+				if(ulLoop == 900000)
+				{
+					GLCD_IMAGE(status_menu);
+					GLCD_OUT_STR(62,15,"Temp :26 C",1);
+					GLCD_OUT_STR(62,25,"Condt:7 uS.",1);
+					GLCD_OUT_STR(62,35,"Chem :0 L",1);
+					GLCD_DISPLAY();					
+				}
+			}
+			
+			if(slave_run==0);
+			{
+				GLCD_DRW_REC_SOLID(11,26,14,55,0);
+				GLCD_DRW_REC_SOLID(14,34,45,37,0);
+				GLCD_DRW_REC_SOLID(14,52,45,55,0);
+				GLCD_DISPLAY();
+				if(ScanKeyMatrix()=='<')
+				{
+					menu_index = 1;
+					goto main_menu;
+				}
+				//SysCtlDelay(5000000);	//delay 40ms
+				for(ulLoop = 0; ulLoop < 1000000; ulLoop++)
+			{
+				if(ulLoop == 53000)
+				{
+					GLCD_IMAGE(status_menu);
+					GLCD_OUT_STR(62,15,"Temp :26 C",1);
+					GLCD_OUT_STR(62,25,"Condt:5 uS.",1);
+					GLCD_OUT_STR(62,35,"Chem :0 L",1);
+					GLCD_DISPLAY();					
+				}
+				if(ulLoop == 700000)
+				{
+					GLCD_IMAGE(status_menu);
+					GLCD_OUT_STR(62,15,"Temp :25 C",1);
+					GLCD_OUT_STR(62,25,"Condt:6 uS.",1);
+					GLCD_OUT_STR(62,35,"Chem :0 L",1);
+					GLCD_DISPLAY();					
+				}
+				if(ulLoop == 760000)
+				{
+					GLCD_IMAGE(status_menu);
+					GLCD_OUT_STR(62,15,"Temp :25 C",1);
+					GLCD_OUT_STR(62,25,"Condt:5 uS.",1);
+					GLCD_OUT_STR(62,35,"Chem :0 L",1);
+					GLCD_DISPLAY();					
+				}
+			}
+			}
+		}					
+	}		
 	
 	
 	while(1)
